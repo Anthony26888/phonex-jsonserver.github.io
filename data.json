@@ -1,0 +1,229 @@
+{
+    "products":[
+        {
+            "id": 1,
+            "brand": "Apple",
+            "kind": "Mobile",
+            "system": "IOS",
+            "image": "iphone-14pm.png",
+            "name": "Iphone 14 Pro Max",
+            "price": 27090000,
+            "type": {
+                "storage": ["64GB", "128GB", "256GB"],
+                "color": ["Silver", "Gold"]
+            }
+        },
+        {
+            "id": 2,
+            "brand": "Apple",
+            "kind": "Mobile",
+            "system": "IOS",
+            "image": "iphone-14.png",
+            "name": "Iphone 14",
+            "price": 19490000,
+            "type": {
+                "storage": ["64GB", "128GB", "512GB"],
+                "color": ["Black", "White", "Red"]
+            }
+        },
+        {
+            "id": 3,
+            "brand": "Apple",
+            "kind": "Mobile",
+            "system": "IOS",
+            "image": "iphone-14-pro.png",
+            "name": "Iphone 14 Pro",
+            "price": 24990000,
+            "type": {
+                "storage": ["128GB", "256GB", "512GB"],
+                "color": ["Yellow", "Sliver", "Purple", "Black"]
+            }
+        },
+        {
+            "id": 4,
+            "brand": "Apple",
+            "kind": "Tablet",
+            "system": "IOS",
+            "image": "ipad-pro-m1.png",
+            "name": "Ipad Pro M1",
+            "price": 44990000,
+                "type": {
+                "storage": ["1TB"],
+                "color": ["Sliver", "Gray"]
+            }
+        },
+        {
+            "id": 5,
+            "brand": "Apple",
+            "kind": "SmartWatch",
+            "system": "IOS",
+            "image": "apple-watch-ultra-alpine.png",
+            "name": "Apple Watch Ultra Alpine",
+            "price": 18990000,
+            "type": {
+                "size": ["44mm"],
+                "storage": ["32GB"],
+                "color": ["Sliver", "Gray"]
+            }
+        },
+        {
+            "id": 6,
+            "brand": "Nokia",
+            "kind": "Mobile",
+            "system": "Android",
+            "image": "nokia-c21-plus.png",
+            "name": "Nokia C21 Plus",
+            "price": 2390000,
+            "type": {
+                "storage": ["64GB", "32GB"],
+                "color": ["Gray", "Blue"]
+            }
+        },
+        {
+            "id": 7,
+            "brand": "Oppo",
+            "kind": "Mobile",
+            "system": "Android",
+            "image": "oppo-find-n2.png",
+            "name": "Oppo Find N2",
+            "price": 19990000,
+            "type": {
+                "storage": ["256GB"],
+                "color": ["Purple", "Black"]
+            }
+        },
+        {
+            "id": 8,
+            "brand": "Realme",
+            "kind": "Mobile",
+            "system": "Android",
+            "image": "realme-c55.png",
+            "name": "Realme C55",
+            "price": 4590000,
+            "type": {
+                "storage": ["128GB"],
+                "color": ["Gold", "Black"]
+            }
+        },
+        {
+            "id": 9,
+            "brand": "Samsung",
+            "kind": "Mobile",
+            "system": "Android",
+            "image": "samsung-galaxy-zfold4.png",
+            "name": "Samsung Galaxy Z Fold 4",
+            "price": 35490000,
+            "type": {
+                "storage": ["256GB", "512GB"],
+                "color": ["Cream", "Black", "Moss green"]
+            }
+        },
+        {
+            "id": 10,
+            "brand": "Samsung",
+            "kind": "Mobile",
+            "system": "Android",
+            "image": "samsung-galaxy-z-flip4-5g.png",
+            "name": "Samsung Galaxy Z Flip 4",
+            "price": 19990000,
+            "type": {
+                "storage": ["128GB","256GB", "512GB"],
+                "color": ["Purle", "Blue", "Gold", "Gray"]
+            }
+        },
+        {
+            "id": 11,
+            "brand": "Samsung",
+            "kind": "Mobile",
+            "system": "Android",
+            "image": "Samsung-Galaxy-S21-FE.png",
+            "name": "Samsung Galaxy S21 FE",
+            "price": 9990000,
+            "type": {
+                "storage": ["128GB","256GB"],
+                "color": ["Green", "Gray"]
+            }
+        },
+        
+        {
+            "id": 12,
+            "brand": "Samsung",
+            "kind": "Tablet",
+            "system": "Android",
+            "image": "samsung-galaxy-tab-a8.png",
+            "name": "Samsung Galaxy Tab A8",
+            "price": 6990000,
+            "type": {
+                "storage": ["64GB"],
+                "color": ["Sliver", "Gray"]
+            }
+        },
+        {
+            "id": 13,
+            "brand": "Samsung",
+            "kind": "SmartWatch",
+            "system": "Android",
+            "image": "samsung-galaxy-watch5.png",
+            "name": "Samsung Galaxy Watch 5",
+            "price": 5490000,
+            "type": {
+            "size": ["40mm", "44mm"],
+                "storage": ["16GB"],
+                "color": ["Purle", "Black"]
+            }
+        },
+        {
+            "id": 14,
+            "brand": "Vivo",
+            "kind": "Mobile",
+            "system": "Android",
+            "image": "vivo-v23.png",
+            "name": "Vivo V23 Series",
+            "price": 5490000,
+            "type": {
+                "storage": ["128GB"],
+                "color": ["Pink Blue", "Black"]
+            }
+        },
+        {
+            "id": 15,
+            "brand": "Vivo",
+            "kind": "Mobile",
+            "system": "Android",
+            "image": "vivo-y02s.png",
+            "name": "Vivo Y02s",
+            "price": 2890000,
+            "type": {
+                "storage": ["32GB", "64GB"],
+                "color": ["Blue", "Black"]
+            }
+        },
+        {
+            "id": 16,
+            "brand": "Xiaomi",
+            "kind": "Mobile",
+            "system": "Android",
+            "image": "xiaomi-readmi-note11s.png",
+            "name": "Xiaomi Readmi Note 11",
+            "price": 4990000,
+            "type": {
+                "storage": ["128GB"],
+                "color": ["Gray", "Blue"]
+            }
+        },
+        {
+            "id": 17,
+            "brand": "Xiaomi",
+            "kind": "Tablet",
+            "system": "Android",
+            "image": "Redmi-Pad.png",
+            "name": "Xiaomi Readmi Pad",
+            "price": 5990000,
+            "type": {
+                "storage": ["128GB"],
+                "color": ["Gray", "Blue", "Sliver"]
+            }
+        }
+    ]
+}
+    

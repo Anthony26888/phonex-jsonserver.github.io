@@ -1,0 +1,3 @@
+{
+    "/idProducts/:id": "/products?id=:id"
+}
