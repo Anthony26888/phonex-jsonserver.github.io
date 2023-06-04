@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Foldit:wght@700&family=Vina+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Foldit:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Foldit:wght@700&family=Noto+Sans&family=Vina+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Foldit:wght@700&family=Noto+Sans&family=Open+Sans:ital,wght@0,400;1,300;1,400&family=Vina+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Foldit:wght@700&family=Noto+Sans&family=Open+Sans:ital,wght@0,400;1,300;1,400;1,500&family=Vina+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Foldit:wght@700&family=Inter:wght@600&family=Noto+Sans&family=Open+Sans:ital,wght@1,500&family=Vina+Sans&display=swap");
+/******************************header*****************************/
+
+span {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(29, 29, 31);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 110px;
+  top: -5px;
+  left: -5px;
+  background-color: #fbfbfd;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 0 10px #e0e0e0;
+  z-index: 0;
+}
+.nav {
+  position: absolute;
+  width: 1000px;
+  height: 110px;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 40px;
+  font-family: "Bruno Ace SC", cursive;
+}
+
+.looking {
+  display: flex;
+  position: absolute;
+  right: 150px;
+  top: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 0 7px #e0e0e0;
+}
+
+.looking input {
+  width: 250px;
+  height: 25px;
+  outline: 0;
+  border: 0;
+}
+
+.looking i {
+  padding: 5px 5px;
+  background-color: #ffffff;
+  outline: 0;
+  cursor: pointer;
+}
+
+.cart {
+  position: absolute;
+  top: 5px;
+  right: 70px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.user {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.quantity {
+  border: 1px solid red;
+  border-radius: 50%;
+  text-align: center;
+  background-color: red;
+  color: white;
+  width: 15px;
+  height: 15px;
+  font-size: 15px;
+  padding: auto auto;
+  position: absolute;
+  top: 0%;
+  right: -20%;
+}
+
+.nav .main-menu {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 10px;
+  width: 800px;
+  margin: 60px auto;
+}
+
+.main-menu .item-menu {
+  margin: 0 auto;
+  display: flex;
+  width: 60px;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.main-menu .item-menu img {
+  width: 40px;
+  height: 40px;
+}
+
+.main-menu .item-menu span {
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+/***************************** modol-cart*****************************/
+
+.modal-cart {
+  display: none;
+  position: fixed;
+  top: -5%;
+  right: 0;
+  width: 450px;
+  height: 110%;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 0 10px #e0e0e0;
+  z-index: 99;
+}
+
+h1 {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-size: 25px;
+}
+
+.button-cart {
+  display: flex;
+  position: absolute;
+  top: 90%;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+}
+
+.CloseModal {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  cursor: pointer;
+  width: 50%;
+}
+
+.CloseModal:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.CloseModal:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.CloseModal:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #009087;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.CloseModal:hover {
+  color: #ffffff;
+  border: 1px solid #009087;
+}
+
+.CloseModal:hover:before {
+  top: -35%;
+  background-color: #009087;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.CloseModal:hover:after {
+  top: -45%;
+  background-color: #009087;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.CheckOut {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  cursor: pointer;
+  width: 50%;
+}
+
+.CheckOut:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.CheckOut:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.CheckOut:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #009087;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.CheckOut:hover {
+  color: #ffffff;
+  border: 1px solid #009087;
+}
+
+.CheckOut:hover:before {
+  top: -35%;
+  background-color: #009087;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.CheckOut:hover:after {
+  top: -45%;
+  background-color: #009087;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.listCart {
+  width: 350px;
+  height: 500px;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%);
+  overflow-x: hidden;
+  padding: 0 40px;
+}
+
+.listCart li {
+  display: grid;
+  grid-template-columns: 15% 30% 18% 25% 10%;
+  column-gap: 3px;
+  color: black;
+  width: 120%;
+
+  margin: 0 -10%;
+  margin-bottom: 15px;
+  align-items: center;
+
+  border: 1px solid #bbbb;
+  border-radius: 10px;
+  padding: 5px 0;
+
+  background-color: whitesmoke;
+  transition: 0.5s ease-in;
+}
+
+.listCart li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px #ffefd5;
+}
+
+.listCart li img {
+  width: 60px;
+  height: 60px;
+}
+
+.listCart li button {
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.Qty {
+  margin: 0 5px;
+  width: 100px;
+}
+
+.total {
+  position: absolute;
+  color: black;
+  top: 80%;
+  left: 47%;
+  display: flex;
+  align-items: center;
+}
+
+.total span {
+  font-size: 20px;
+}
+
+.total .total-number {
+  color: #e83a45;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+
+  margin-left: 10px;
+}
+
+.delete {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: red;
+  color: black;
+}
+
+.delete span {
+  position: absolute;
+  z-index: 10;
+  transition: color 0.4s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.delete:hover span {
+  color: white;
+}
+
+.delete::before,
+.delete::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.delete::before {
+  content: "";
+  background: white;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.delete:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+/*********************************************** CONTAINER****/
+.container {
+  position: relative;
+  top: 120px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 75%;
+  height: 750px;
+}
+/****************IMAGE-PRODUCT */
+.imageProduct {
+  position: absolute;
+  width: 750px;
+  height: 600px;
+  
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+}
+
+.imageProduct img {
+  width: 750px;
+  height: 600px;
+  border-radius: 20px;
+}
+
+.infoProduct {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 550px;
+  height: 600px;
+  
+  transform: translate(0, -50%);
+}
+
+.name-price {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+}
+
+.nameProduct {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 41px;
+}
+
+.priceProduct {
+  position: absolute;
+  bottom: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 41px;
+  color: #e83a45;
+}
+
+.storage {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  height: 100px;
+}
+
+.titlestorage {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 41px;
+}
+
+.storage input[type="radio"] {
+  display: none;
+}
+.storage label {
+  display: inline-block;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+.storage input[type="radio"]:checked + label {
+  background-color: #333;
+  color: #fff;
+}
+
+.color {
+  position: absolute;
+  top: 250px;
+}
+.color input[type="radio"] {
+  display: none;
+}
+.color label {
+  display: inline-block;
+  background-color: #ffffff;
+  cursor: pointer;
+  margin-right: 30px;
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 35px;
+  height: 35px;
+  
+}
+
+.color input[type="radio"]:checked + label {
+  background-color: red;
+  color: red;
+}
+
+.color label img {
+  width: 30px;
+  height: 30px;
+  
+  padding: auto auto;
+  
+
+}

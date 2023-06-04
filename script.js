@@ -6,9 +6,13 @@ var total = document.querySelector(".total-number");
 var quantity = document.querySelector(".quantity");
 var filters = document.querySelector(".filter");
 var showMoreItem =document.querySelector(".showMoreItem");
+var addToCart = document.querySelector(".add-to-cart");
+
 let valueItem ="";
 var itemsToShow = 8; // Number of items to initially show
 const itemsToLoad = 8;
+
+
 
 /******************SHOW PRODUCT */
 
@@ -28,49 +32,49 @@ function displayCard(){
   fetch(url)
       .then((response) => response.json())
       .catch(error => console.log(error))
-      .then(data => {      
-      
-      let result = document.querySelector(".num-result")
-      result.innerHTML = Math.max(0, data.length -itemsToShow);      
-      list.innerHTML="";
-      
-      data.forEach((value,key) => {    
-          let newDiv = document.createElement("div");    
-          let newUl = document.createElement("ul");
-          newDiv.classList.add("card");     
-          
-          let newImage = new Image();
-          newImage.src = "img/products/" + value.image;
-          newDiv.appendChild(newImage);
+      .then(data => {         
+        list.innerHTML="";       
+        data.forEach((value,key) => {    
+            let newDiv = document.createElement("div");    
+            let newUl = document.createElement("ul");
+            newDiv.classList.add("card");          
+            
+            
+            let newImage = new Image();
+            newImage.src = "img/products/" + value.image;
+            newDiv.appendChild(newImage);
 
-          /*display name */
-          let newTitle = document.createElement("h4");
-          newTitle.classList.add("title");
-          newTitle.innerHTML = value.name;
-          newDiv.appendChild(newTitle);
+            /*display name */
+            let newTitle = document.createElement("h4");
+            newTitle.classList.add("title");
+            newTitle.innerHTML = value.name;
+            newDiv.appendChild(newTitle);
 
-          /*display storage*/        
-          value.type.storage.forEach(item =>{        
+            /*display storage*/    
+            value.type.storage.forEach(item =>{        
               let newStorage = document.createElement("li"); 
               newStorage.classList.add("storage");            
               newStorage.innerHTML = item;
               newUl.appendChild(newStorage);    
-          });      
-          newDiv.appendChild(newUl);
+            });      
+            newDiv.appendChild(newUl);
 
-          /*display price */
-          let newPrice = document.createElement("strong");
-          newPrice.classList.add("price");
-          newPrice.innerHTML = value.price.toLocaleString() + 'đ';
-          newDiv.appendChild(newPrice);
-          
+            /*display price */
+            let newPrice = document.createElement("strong");
+            newPrice.classList.add("price");
+            newPrice.innerHTML = value.price.toLocaleString() + 'đ';
+            newDiv.appendChild(newPrice);
+            
 
-          /*display add to cart*/
-          let newButton = document.createElement("button");  
-          newButton.onclick = function() {AddToCart(key)};   
-          newButton.innerHTML = 'ADD TO CART';
-          newDiv.appendChild(newButton);    
-          list.appendChild(newDiv);
+            /*display add to cart*/
+            let newButton = document.createElement("button");  
+            newButton.classList.add("add-to-cart"); 
+            newButton.value=`${key}`  
+            newButton.innerHTML = 'ADD TO CART';
+            newButton.onclick = (function () {AddToCart(this)});
+            newDiv.appendChild(newButton); 
+            
+            list.appendChild(newDiv);
       });
     if(itemsToShow !== data.length){
       showMoreItem.style.display="none";
@@ -96,18 +100,34 @@ function showMore() {
 /********************ADD TO CART */
 
 let listCarts = [];
-
-function AddToCart(key) {
+function AddToCart(item){
+  /*
   fetch(valueItem)
       .then((response) => response.json())
       .catch(error => console.log(error))
       .then(data => {
         if (listCart[key] == null) {
           listCarts[key] = JSON.parse(JSON.stringify(data[key]));
-          listCarts[key].quantity = 1;
+          listCarts[key].quantity = 1;          
         }
       })
-  reloadCart();
+      */
+  fetch(url)
+    .then((response) => response.json())
+    .catch(error => console.log(error))
+    .then(data => {
+      
+      valueIndex = item.value;      
+      array = data[valueIndex];
+      array.quantity =1;
+      listCarts.push(array);
+          
+      console.log(listCarts)      
+      reloadCart()
+
+      
+    })
+    
 }
 
 function reloadCart() {
@@ -118,49 +138,18 @@ function reloadCart() {
     count = item.quantity + count;
     totalItem = item.price + totalItem;
     let newli = document.createElement("li");
-    let newDiv = document.createElement("div");
 
-      /**display image cart */
-      let newImage = new Image();
-      newImage.src = "img/products/" + item.image;
-      newli.appendChild(newImage);
-
-      /**display name cart */
-      let newName = document.createElement("span");
-      newName.innerHTML = item.name;
-      newli.appendChild(newName);
-
-      /**display button - cart */
-      let newBtnDiv = document.createElement("button");
-      newBtnDiv.onclick = function () {changeQuantity(key, item.quantity - 1);};
-      newBtnDiv.innerHTML = "-";
-      newDiv.appendChild(newBtnDiv);
-
-      /**display quantity cart */
-      let newQty = document.createElement("span");
-      newQty.classList.add("Qty");
-      newQty.innerHTML = item.quantity;
-      newDiv.appendChild(newQty);
-
-      /**display button + cart */
-      let newBtnPlus = document.createElement("button");
-      newBtnPlus.onclick = function () {
-        changeQuantity(key, item.quantity + 1);
-      };
-      newBtnPlus.innerHTML = "+";
-      newDiv.appendChild(newBtnPlus);
-
-      newli.appendChild(newDiv);
-
-      let newPrice = document.createElement("span");
-      newPrice.innerHTML = item.price.toLocaleString() + "đ";
-      newli.appendChild(newPrice);
-
-      let newBtnDel = document.createElement("button");
-      newBtnDel.classList.add("delete");
-      newBtnDel.onclick = function () {clearLi(key);};
-      newBtnDel.innerHTML ='<span><i class="fa fa-times" aria-hidden="true"></i></span>';
-      newli.appendChild(newBtnDel);
+    newli.innerHTML=`
+      <img src="img/products/${item.image}" alt="${item.name}">
+      <span>${item.name}</span>
+      <div>
+        <button onclick="changeQuantity(${key},${item.quantity} -1)">-</button>
+        <span class="Qty">${item.quantity}</span>
+        <button onclick="changeQuantity(${key},${item.quantity} + 1)">+</button>
+      </div>
+      <span>${item.price.toLocaleString()} đ</span>
+      <button class="delete" onclick = "clearLi(${key})"><span><i class="fa fa-times" aria-hidden="true"></i></span></button>
+    `
     
     listCart.appendChild(newli);
     quantity.innerHTML = count;
@@ -171,12 +160,17 @@ function reloadCart() {
 /**********************TOTAL PRICE IN CART */
 
 function changeQuantity(key, quantity) {
-  if (quantity == 0) {
-    delete listCarts[key];
-  } else {
-    listCarts[key].quantity = quantity;
-    listCarts[key].price = quantity * products[key].price;
-  }
+  fetch(url)
+    .then((response) => response.json())
+    .catch(error => console.log(error))
+    .then(data => {
+      if (quantity == 0) {
+        delete listCarts[key];
+      } else {
+        listCarts[key].quantity = quantity;
+        listCarts[key].price = quantity * data[key].price;
+      }
+    })
   reloadCart();
 }
 
@@ -225,35 +219,64 @@ function menu(item) {
 
 
 
+
+
 /************************************FILTER PRODUCT */
 filters.addEventListener("submit", function (event) {
-  let rangePrice = document.getElementById("price").value;
-  let system = document.getElementById("system").value;
-  let storageFilter = document.getElementById("storage").value;
-
-  const max = 0;
-  const max0 = 5000000;
-  const max1 = 10000000;
-  const max2 = 20000000;
-  const max3 = 30000000;
-
   event.preventDefault();
-  if (rangePrice == max0){
-    valueItem = `price_gte=${max}&price_lte=${max0}`;
+  
+  let valueType = document.getElementById("type").value;
+  let valuePrice = document.getElementById("price").value;
+  let valueSystem = document.getElementById("system").value;
+  let valueStorage = document.getElementById("storage").value;
+  
+  let gtePrice = valuePrice.split(',')[0];
+  let ltePrice = valuePrice.split(',')[1];
+
+  if(valuePrice !=""){
+    Price = `price_gte=${gtePrice}&price_lte=${ltePrice}`;
+  }else{
+    Price = "";
   }
-  if (rangePrice == max1){
-    valueItem = `price_gte=${max0}&price_lte=${max1}`;
+
+  if(valueSystem !=""){
+    System =`system=${valueSystem}`;
+  }else{
+    System = "";
   }
-  if (rangePrice == max2){
-    valueItem = `price_gte=${max1}&price_lte=${max2}`;
+
+  if(valueStorage !=""){
+    storage =`q=${valueStorage}`;
+  }else{
+    storage = "";
   }
-  if (rangePrice == max3){
-    valueItem = `price_gte=${max2}&price_lte=${max3}`;
+
+  if (valueType !=""){
+    type = `kind=${valueType}`;
+  }else{
+    type = "";
   }
+  
+  
+  valueItem = Price +  '&' + System + '&' + storage + '&' + type;
+  
 
   
   displayCard(valueItem);
 });
+
+
+/************************************Search */
+function submitSearch(){
+  var inputSearch = document.getElementById("inputSearch").value;
+  if(inputSearch !=""){
+    valueItem = `q=` + inputSearch;
+  }else{
+    valueItem="";
+  }
+  displayCard(valueItem);
+}
+
 
 
 

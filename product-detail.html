@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="product-detail.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.tgdd.vn/mwgcart/mwgcore/ContentMwg/images/DMX/Global/Desktop/Logo-webmoi.webp"/>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav">
+          <a href="index.html"><span class="logo">PHONE X</span></a>
+          <div class="cart" onclick="OpenCart()">
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            <div class="quantity">0</div>
+          </div>
+          <form class="looking">
+            <input type="text" name="search" placeholder="What are you looking for?" id ="inputSearch"/>
+            <div onclick="submitSearch()"><i class="fa fa-search" aria-hidden="true"></i></div>
+          </form>
+          <div class="user">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </div>
+  
+          <div class="main-menu">
+            <div class="item-menu" onclick="menu(this)" data-value="Mobile">
+              <img src="img/main-menu/smartphone.png" alt="smart-phone" />
+              <span>Mobile</span>
+            </div>
+            <div class="item-menu" onclick="menu(this)" data-value="Tablet">
+              <img src="img/main-menu/ipad.png" alt="Tablet" />
+              <span>Tablet</span>
+            </div>
+            <div class="item-menu" onclick="menu(this)" data-value="SmartWatch">
+              <img src="img/main-menu/watch.png" alt="smart-watch" />
+              <span>SmartWatch</span>
+            </div>
+            <div class="item-menu" onclick="menu(this)" data-value="Laptop">
+              <img src="img/main-menu/laptop.png" alt="smart-watch" />
+              <span>Laptop</span>
+            </div>
+            <div class="item-menu" onclick="menu(this)" data-value="Accessory">
+              <img src="img/main-menu/headphones.png" alt="smart-watch" />
+              <span>Accessory</span>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="imageProduct">
+            <img src="img/detail/iphone14-pro-1.jpg" alt="">
+           
+        </div>
+        <form class="infoProduct">
+            <div class="name-price">
+                <span class="nameProduct">iPhone 14 Pro</span><br>
+                <span class="priceProduct">24,890,000 đ</span>
+            </div>
+            <div class="storage">
+                <span class="titleStorage">Select Storage:</span><br>
+                <input type="radio" class="inputStorage">
+                <label for="">64GB</label>
+                <input type="radio" class="inputStorage">
+                <label for="">128GB</label>
+                <input type="radio" class="inputStorage">
+                <label for="">256GB</label>
+            </div>
+            <div class="color">
+                <span class="titleStorage">Select Color:</span><br>
+                <input type="radio" class="inputStorage">
+                <label for=""><img src="img/color/finish-black-202010.jpg" alt=""></label>
+                <input type="radio" class="inputStorage">
+                <label for=""><img src="img/color/finish-white-202010.jpg" alt=""></label>
+                <input type="radio" class="inputStorage">
+                <label for=""><img src="img/color/finish-red-202010.jpg" alt=""></label>
+            </div>
+            
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <footer class="modal-cart">
+        <h1>CART</h1>
+        <ul class="listCart">
+          
+        </ul>
+        <div class="total">
+          <span>Total: </span>
+          <span class="total-number"></span>
+        </div>
+        <div class="button-cart">
+          <button onclick="closeCart()" type="button" class="CloseModal">
+            CLOSE
+          </button>
+          <button class="CheckOut">
+            CHECK OUT <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
