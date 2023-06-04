@@ -61,25 +61,36 @@
                 <span class="priceProduct">24,890,000 đ</span>
             </div>
             <div class="storage">
-                <span class="titleStorage">Select Storage:</span><br>
-                <input type="radio" class="inputStorage">
-                <label for="">64GB</label>
-                <input type="radio" class="inputStorage">
-                <label for="">128GB</label>
-                <input type="radio" class="inputStorage">
-                <label for="">256GB</label>
+              <span class="titleStorage">Select Storage</span><br>
+              <input type="radio" id="radio1" name="storage" value="all" >
+              <label for="radio1" class="radioStorage">64 GB</label>
+              <input type="radio" id="radio2" name="storage" value="false">
+              <label for="radio2"  class="radioStorage">128 GB</label>
+              <input type="radio" id="radio3" name="storage" value="true">
+              <label for="radio3" class="radioStorage">256 GB</label>
             </div>
             <div class="color">
-                <span class="titleStorage">Select Color:</span><br>
-                <input type="radio" class="inputStorage">
-                <label for=""><img src="img/color/finish-black-202010.jpg" alt=""></label>
-                <input type="radio" class="inputStorage">
-                <label for=""><img src="img/color/finish-white-202010.jpg" alt=""></label>
-                <input type="radio" class="inputStorage">
-                <label for=""><img src="img/color/finish-red-202010.jpg" alt=""></label>
+              <span class="titleStorage">Select Color:</span><br>
+              <input type="radio" id="radio4" name="color" value="all" >
+              <label for="radio4" class="radioColor"><img src="img/color/finish-black-202010.jpg" alt=""></label>
+              <input type="radio" id="radio5" name="color" value="false">
+              <label for="radio5" class="radioColor"><img src="img/color/finish-white-202010.jpg" alt=""></label>
+              <input type="radio" id="radio6" name="color" value="true">
+              <label for="radio6" class="radioColor"><img src="img/color/finish-red-202010.jpg" alt=""></label>
             </div>
-            
+
+            <div class="groupButton">
+              <button class="atcDetail">Add To Cart</button>
+              <span>or</span>
+              <button class="iPDetail">Installment Payment</button>
+            </div>
         </form>
+        <div class="detailProduct">
+          <div class="buttonTab">
+            <button class="description">Description</button>
+            <button class="specification">Specifications</button>
+          </div>
+        </div>
     </div>
 
 
