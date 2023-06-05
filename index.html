@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone X</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.tgdd.vn/mwgcart/mwgcore/ContentMwg/images/DMX/Global/Desktop/Logo-webmoi.webp"/>
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="nav">
+        <a href="index.html"><span class="logo">PHONE X</span></a>
+        <div class="cart" onclick="OpenCart()">
+          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+          <div class="quantity">0</div>
+        </div>
+        <form class="looking">
+          <input type="text" name="search" placeholder="What are you looking for?" id ="inputSearch"/>
+          <div onclick="submitSearch()"><i class="fa fa-search" aria-hidden="true"></i></div>
+        </form>
+        <div class="user">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+
+        <div class="main-menu">
+          <div class="item-menu" onclick="menu(this)" data-value="Mobile">
+            <img src="img/main-menu/smartphone.png" alt="smart-phone" />
+            <span>Mobile</span>
+          </div>
+          <div class="item-menu" onclick="menu(this)" data-value="Tablet">
+            <img src="img/main-menu/ipad.png" alt="Tablet" />
+            <span>Tablet</span>
+          </div>
+          <div class="item-menu" onclick="menu(this)" data-value="SmartWatch">
+            <img src="img/main-menu/watch.png" alt="smart-watch" />
+            <span>SmartWatch</span>
+          </div>
+          <div class="item-menu" onclick="menu(this)" data-value="Laptop">
+            <img src="img/main-menu/laptop.png" alt="smart-watch" />
+            <span>Laptop</span>
+          </div>
+          <div class="item-menu" onclick="menu(this)" data-value="Accessory">
+            <img src="img/main-menu/headphones.png" alt="smart-watch" />
+            <span>Accessory</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="slide">
+      <div class="slider">
+        <img src="img/slide/12c-800-200-800x200.png" alt="banner-1" />
+      </div>
+      <div class="slider">
+        <img src="img/slide/a34-800-200-800x200.png" alt="banner-2" />
+      </div>
+      <div class="slider">
+        <img src="img/slide/iP-11-800-200-800x200.png" alt="banner-3" />
+      </div>
+      <div class="slider">
+        <img src="img/slide/nokia-g22-800-200-800x200-2.png" alt="banner-4" />
+      </div>
+      <div class="slider">
+        <img src="img/slide/realme-C55-800-200-800x200-1.png" alt="banner-5" />
+      </div>
+      <div class="slider">
+        <img src="img/slide/reno8t-800-200-800x200.png" alt="banner-6" />
+      </div>
+      <div class="slider">
+        <img src="img/slide/s23-800-200-800x200-3.png" alt="banner-7" />
+      </div>
+      <div class="slider">
+        <img src="img/slide/vivo-V27e--800-200-800x200.png" alt="banner-8" />
+      </div>
+
+      <!--next/pre-->
+      <a class="prev" onclick="plusSlide(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlide(+1)">&#10095;</a>
+    </div>
+
+    <div class="filter-product">
+      <div class="logo-filter">
+        <div class="brand" data-value="Apple" onclick="filter(this)">
+          <img src="img/logo-brand/logo-iphone-220x48.png" alt="Apple" />
+        </div>
+        <div class="brand" data-value="Samsung" onclick="filter(this)">
+          <img src="img/logo-brand/samsungnew-220x48-1.png" alt="Samsung" />
+        </div>
+        <div class="brand" data-value="Nokia" onclick="filter(this)">
+          <img src="img/logo-brand/Nokia42-b_21.jpg" alt="Nokia" />
+        </div>
+        <div class="brand" data-value="Xiaomi" onclick="filter(this)">
+          <img src="img/logo-brand/logo-xiaomi-220x48-5.png" alt="Xiaomi" />
+        </div>
+        <div class="brand" data-value="Oppo" onclick="filter(this)">
+          <img src="img/logo-brand/OPPO42-b_5.jpg" alt="Oppo" />
+        </div>
+        <div class="brand" data-value="Realme" onclick="filter(this)">
+          <img src="img/logo-brand/Realme42-b_37.png" alt="Realme" />
+        </div>
+        <div class="brand" data-value="Vivo" onclick="filter(this)">
+          <img src="img/logo-brand/vivo-logo-220-220x48-3.png" alt="Vivo" />
+        </div>
+      </div>
+
+      <form class="filter">
+        <div class="item">
+          <select name="type" id="type">
+            <option value="" disabled selected hidden>Type</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Tablet">Tablet</option>
+            <option value="SmartWatch">SmartWatch</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Accessory">Accessory</option>
+          </select>
+        </div>
+
+        <div class="item">
+          <select name="price" id="price">
+            <option value="" disabled selected hidden>Price</option>
+            <option value='0,5000000'>0 - 5,000,000 đ</option>
+            <option value="5000000,10000000">5,000,000 - 10,000,000</option>
+            <option value="10000000,20000000">10,000,000 - 20,000,000</option>
+            <option value="20000000,30000000">20,000,000 - 30,000,000</option>
+            <option value="30000000, 50000000">30,000,000 - 50,000,000</option>
+          </select>
+        </div>
+
+        <div class="item">
+          <select name="system" id="system">
+            <option value="" disabled selected hidden>System</option>
+            <option value="Android">Android</option>
+            <option value="IOS">Iphone (IOS)</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="item">
+          <select name="storage" id="storage">
+            <option value="" disabled selected hidden>Storage</option>
+            <option value="64GB">64GB</option>
+            <option value="128GB">128GB</option>
+            <option value="256GB">256GB</option>
+            <option value="512GB">512GB</option>
+            <option value="1TB">1TB</option>
+          </select>
+        </div>
+
+        <div class="item submit">
+          <button class="search">Search</button>
+        </div>
+      </form>
+
+      
+    
+      
+      
+    </div>
+
+    <div class="container">
+      <div class="list"></div>
+      <button class="showMoreItem" onclick="showMore()">
+        <span>Show More</span><br>            
+      </button>
+    </div>
+
+    <div class="footer">
+      <span class="logo">PHONE X</span>
+      <span class="distributor">Distributors</span>
+      <ul class="logo-supply">
+        <li>
+          <a
+            rel="nofollow"
+            href="https://www.topzone.vn/"
+            target="_blank"
+            title="Chuỗi cửa hàng cao cấp Apple"
+          >
+            <i class="iconlogo-topzone visible"></i>
+          </a>
+        </li>
+        <li>
+          <a rel="nofollow" href="https://www.dienmayxanh.com/" target="_blank">
+            <i class="iconlogo-dienmayxanh visible"></i>
+          </a>
+        </li>
+        <li>
+          <a rel="nofollow" href="https://www.bachhoaxanh.com/" target="_blank">
+            <i class="iconlogo-bachhoaxanh visible"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            rel="nofollow"
+            href="https://www.nhathuocankhang.com/"
+            target="_blank"
+            title="Chuỗi nhà thuốc chuẩn GPP"
+          >
+            <i class="iconlogo-ankhang visible"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            rel="nofollow"
+            href="https://www.avakids.com/"
+            target="_blank"
+            title="Chuỗi cửa hàng mẹ và bé"
+          >
+            <i class="iconlogo-kids visible"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            rel="nofollow"
+            href="https://www.dichvutantam.com/"
+            target="_blank"
+            title="Dịch vụ vệ sinh máy lạnh, sửa chữa điện nước, lắp đặt máy lạnh, máy giặt, tivi"
+          >
+            <i class="iconlogo-tantam visible"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="modal-cart">
+      <h1>CART</h1>
+      <ul class="listCart">
+        
+      </ul>
+      <div class="total">
+        <span>Total: </span>
+        <span class="total-number"></span>
+      </div>
+      <div class="button-cart">
+        <button onclick="closeCart()" type="button" class="CloseModal">
+          CLOSE
+        </button>
+        <button class="CheckOut">
+          CHECK OUT <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
