@@ -473,7 +473,7 @@ h1 {
 .prevDetail{
   position: absolute;
   top:250px;
-  left:25px;
+  left:20px;
   width:52px;
   height:52px;
   font-size: 35px;  
@@ -679,7 +679,7 @@ h1 {
   top:50px;
   left:50%;
   transform: translate(-50%,0);
-  border: 1px solid #e0e0e0;
+ 
   
 }
 
