@@ -9,7 +9,9 @@
             "name": "Iphone 14 Pro Max",
             "price": 27090000,
             "type": {
+                "imgDetail": ["iphone14"],
                 "screen" : "OLED, 6.7 inch, Supper Retina XDR",
+                "os" : "IOS 16",
                 "backCamera" : "Main: 48MP, Secondary: 12 MP, 12 MP",
                 "fontCamera" : "12 MP",
                 "chip" : "Apple A16 Bionic",
@@ -17,7 +19,7 @@
                 "battery" : "4323 mAh, 20W",
                 "sim" : "1 Nano SIM & 1 eSIM",
                 "material":"Stainless Steel Frame & Tempered Glass Back",
-                "Dimensions":"Length 147.5 mm - Width 71.5 mm - Thickness 7.85 mm - Weight 206 g",
+                "demension":"Length 147.5 mm - Width 71.5 mm - Thickness 7.85 mm - Weight 206 g",
                 "storage": ["64GB", "128GB", "256GB"],
                 "color": ["Silver", "Gold"]
                 
@@ -33,6 +35,7 @@
             "price": 19490000,
             "type": {
                 "screen" : "OLED, 6.1 inch, Supper Retina XDR",
+                "os" : "IOS 16",
                 "backCamera" : "2 camera 12 MP",
                 "fontCamera" : "12 MP",
                 "chip" : "Apple A15 Bionic",
@@ -40,7 +43,7 @@
                 "battery" : "3279 mAh, 20W",
                 "sim" : "1 Nano SIM & 1 eSIM",
                 "material":"Stainless Steel Frame & Tempered Glass Back",
-                "Dimensions":"Length 146.7 mm - Width 71.5 mm - Thickness 7.8 mm - Weight 172 g",
+                "demension":"Length 146.7 mm - Width 71.5 mm - Thickness 7.8 mm - Weight 172 g",
                 "storage": ["64GB", "128GB", "512GB"],
                 "color": ["Black", "White", "Red"]
             }
@@ -55,6 +58,7 @@
             "price": 24990000,
             "type": {
                 "screen" : "OLED, 6.1 inch, Supper Retina XDR",
+                "os" : "IOS 16",
                 "backCamera" : "Main: 48MP, Secondary: 12 MP, 12 MP",
                 "fontCamera" : "12 MP",
                 "chip" : "Apple A16 Bionic",
@@ -62,7 +66,7 @@
                 "battery" : "3200 mAh, 20W",
                 "sim" : "1 Nano SIM & 1 eSIM",
                 "material":"Stainless Steel Frame & Tempered Glass Back",
-                "Dimensions":"Length 147.5 mm - Width 71.5 mm - Thickness 7.85 mm - Weight 206 g",
+                "demension":"Length 147.5 mm - Width 71.5 mm - Thickness 7.85 mm - Weight 206 g",
                 "storage": ["128GB", "256GB", "512GB"],
                 "color": ["Yellow", "Sliver", "Purple", "Black"]
             }
@@ -77,6 +81,7 @@
             "price": 44990000,
             "type": {
                 "screen" : "11 inch, Liquid Retina",
+                "os" : "iPadOS 15",
                 "backCamera" : "Main: 12MP, Secondary: 10 MP",
                 "fontCamera" : "12 MP",
                 "chip" : "Apple M1",
@@ -84,7 +89,7 @@
                 "battery" : "7538 mAh, 20W",
                 "sim" : "1 Nano SIM & 1 eSIM",
                 "material":"Solid aluminum",
-                "Dimensions":"Length 247.6 mm - Width 178.5 mm - Thickness 5.9 mm - Weight 466 g",
+                "demension":"Length 247.6 mm - Width 178.5 mm - Thickness 5.9 mm - Weight 466 g",
                 "storage": ["1TB"],
                 "color": ["Sliver", "Gray"]
             }
@@ -99,8 +104,12 @@
             "price": 18990000,
             "type": {
                 "screen" : "OLED1.92 inch",
+                "os" : "iPadOS 15",
+                "backCamera" : "None",
+                "fontCamera" : "None",
                 "battery" : "36 hours(normal), 60 hours(savelife)",
-                "Dimensions":"Length 49 mm - Width 44 mm - Thickness 14.4 mm - Weight 61.3 g",
+                "material":"frame: Titanium, screen: Sapphire Glass",
+                "demension":"Length 49 mm - Width 44 mm - Thickness 14.4 mm - Weight 61.3 g",
                 "sim" : "eSIM",
                 "size": ["44mm"],
                 "storage": ["32GB"],
@@ -125,7 +134,7 @@
                 "battery" : "5050 mAh, 10W",
                 "sim" : "2 Nano SIM",
                 "material":"Aluminum Alloy Frame & Plastic Back",
-                "Dimensions":"Length 164.8 mm - Width 75.9 mm - Thickness 8.55 mm - Weight 191 g",
+                "demension":"Length 164.8 mm - Width 75.9 mm - Thickness 8.55 mm - Weight 191 g",
                 "storage": ["64GB", "32GB"],
                 "color": ["Gray", "Blue"]
             }
@@ -148,7 +157,7 @@
                 "battery" : "4300 mAh, 10W",
                 "sim" : "2 Nano SIM",
                 "material":"Alloy Frame & 5 . Gorilla Glass Back",
-                "Dimensions":"Length 166.2 mm - Width 75.2 mm - Thickness 7.45 mm - Weight 191 g",
+                "demension":"Length 166.2 mm - Width 75.2 mm - Thickness 7.45 mm - Weight 191 g",
                 "storage": ["256GB"],
                 "color": ["Purple", "Black"]
             }
@@ -171,7 +180,7 @@
                 "battery" : "5000 mAh, 10W",
                 "sim" : "2 Nano SIM",
                 "material":"Plastic Frame & Back",
-                "Dimensions":"Length 165.65 mm - Width 75.98 mm - Thickness 7.89 mm - Weight 189.5 g",
+                "demension":"Length 165.65 mm - Width 75.98 mm - Thickness 7.89 mm - Weight 189.5 g",
                 "storage": ["128GB"],
                 "color": ["Gold", "Black"]
             }
@@ -185,6 +194,16 @@
             "name": "Samsung Galaxy Z Fold 4",
             "price": 35490000,
             "type": {
+                "screen" : "Dynamic AMOLED 2X Main 7.6 inch & Secondary 6.2 inch Quad HD+ (2K+)",
+                "os" : "Android 12",
+                "backCamera" : "Main: 50MP, Secondary: 12 MP, 10 MP",
+                "fontCamera" : "10 MP & 4 MP",
+                "chip" : "Snapdragon 8+ Gen 1",
+                "ram" : "12 GB",
+                "battery" : "4400 mAh, 25W",
+                "sim" : "1 Nano SIM",
+                "material":"Aluminum frame & Tempered glass back",
+                "demension":"Length 155.1 mm - Width 130.1 mm - Thickness 6.3 mm - Weight 263 g",
                 "storage": ["256GB", "512GB"],
                 "color": ["Cream", "Black", "Moss green"]
             }
@@ -198,6 +217,16 @@
             "name": "Samsung Galaxy Z Flip 4",
             "price": 19990000,
             "type": {
+                "screen" : "Main: Dynamic AMOLED 2X, Secondary: Super AMOLED Main 6.7 inch & Secondary 1.9 inch Full HD+",
+                "os" : "Android 12",
+                "backCamera" : "2 camera 12 MP",
+                "fontCamera" : "10 MP",
+                "chip" : "Snapdragon 8+ Gen 1",
+                "ram" : "8 GB",
+                "battery" : "3700 mAh, 25W",
+                "sim" : "1 Nano SIM",
+                "material":"Aluminum frame & Tempered glass back",
+                "demension":"Length 165.2 mm - Width 71.9 mm - Thickness 6.9 mm - Weight 187 g",
                 "storage": ["128GB","256GB", "512GB"],
                 "color": ["Purle", "Blue", "Gold", "Gray"]
             }
@@ -211,6 +240,16 @@
             "name": "Samsung Galaxy S21 FE",
             "price": 9990000,
             "type": {
+                "screen" : "Dynamic AMOLED 2X6.4 inchFull HD+",
+                "os" : "Android 12",
+                "backCamera" : "Main 12 MP & Secondary 12 MP, 8 MP",
+                "fontCamera" : "32 MP",
+                "chip" : "Exynos 2100",
+                "ram" : "6 GB",
+                "battery" : "4500 mAh, 25W",
+                "sim" : "1 Nano SIM",
+                "material":"Aluminum frame & Tempered glass back",
+                "demension":"Length 157.7 mm - Width 74.5 mm - Thickness 7.9 mm - Weight 177 g",
                 "storage": ["128GB","256GB"],
                 "color": ["Green", "Gray"]
             }
@@ -225,6 +264,16 @@
             "name": "Samsung Galaxy Tab A8",
             "price": 6990000,
             "type": {
+                "screen" : "10.5 inch TFT LCD",
+                "os" : "Android 11",
+                "backCamera" : "8 MP",
+                "fontCamera" : "5 MP",
+                "chip" : "UniSOC T618",
+                "ram" : "4 GB",
+                "battery" : "4500 mAh, 25W",
+                "sim" : "1 Nano SIM",
+                "material":"Aluminum frame & Tempered glass back",
+                "demension":"Length 246.8 mm - Width 161.9 mm - Thickness 6.9 mm - Weight 508 g",
                 "storage": ["64GB"],
                 "color": ["Sliver", "Gray"]
             }
@@ -238,7 +287,17 @@
             "name": "Samsung Galaxy Watch 5",
             "price": 5490000,
             "type": {
-            "size": ["40mm", "44mm"],
+                "screen" : "SUPER AMOLED1.2 inch",
+                "os" : "Wear OS",
+                "backCamera" : "8 MP",
+                "fontCamera" : "5 MP",
+                "chip" : "Exynos W920",
+                "ram" : "None",
+                "battery" : "284 mAh",
+                "sim" : "None",
+                "material":"Aluminum frame & Tempered glass back",
+                "demension":"Length 40.4 mm - Width 39.3 mm - Thickness 9.8 mm - Weight 28.7 g",
+                "size": ["40mm", "44mm"],
                 "storage": ["16GB"],
                 "color": ["Purle", "Black"]
             }
@@ -252,6 +311,16 @@
             "name": "Vivo V23 Series",
             "price": 5490000,
             "type": {
+                "screen" : "AMOLED 6.44 inch Full HD+",
+                "os" : "Android 11",
+                "backCamera" : "Main 64 MP & Secondary 8 MP, 2 MP",
+                "fontCamera" : "50 MP",
+                "chip" : "MediaTek Helio G96",
+                "ram" : "8 GB",
+                "battery" : "4050 mAh, 44W",
+                "sim" : "2 Nano SIM",
+                "material":"Plastic Frame & Glass Back",
+                "demension":"Length 160.87 mm - Width 74.28 mm - Thickness 7.6 mm - Weight 172 g",
                 "storage": ["128GB"],
                 "color": ["Pink Blue", "Black"]
             }
@@ -265,6 +334,16 @@
             "name": "Vivo Y02s",
             "price": 2890000,
             "type": {
+                "screen" : "IPS LCD6.51 inch HD+",
+                "os" : "Android 12",
+                "backCamera" : "8 MP",
+                "fontCamera" : "5 MP",
+                "chip" : "MediaTek Helio P35",
+                "ram" : "3 GB",
+                "battery" : "5000 mAh, 10W",
+                "sim" : "2 Nano SIM",
+                "material":"High quality polymer plastic frame & back",
+                "demension":"Length 163.95 mm - Width 75.55 mm - Thickness 8.19 mm - Weight 182 g",
                 "storage": ["32GB", "64GB"],
                 "color": ["Blue", "Black"]
             }
@@ -274,12 +353,22 @@
             "brand": "Xiaomi",
             "kind": "Mobile",
             "system": "Android",
-            "image": "xiaomi-readmi-note11s.png",
-            "name": "Xiaomi Readmi Note 11",
-            "price": 4990000,
+            "image": "xiaomi-13.png",
+            "name": "Xiaomi 13",
+            "price": 18990000,
             "type": {
+                "screen" : "AMOLED 6.36 inch Full HD+",
+                "os" : "Android 13",
+                "backCamera" : "Main 50 MP & Secondary 12 MP, 10 MP",
+                "fontCamera" : "32 MP",
+                "chip" : "Snapdragon 8 Gen 2 8 nhân",
+                "ram" : "8 GB",
+                "battery" : "4500 mAh, 10W",
+                "sim" : "2 Nano SIM",
+                "material":"Metal Frame & Glass Back",
+                "demension":"Length 152.8 mm - Width 71.5 mm - Thickness 7.98 mm - Weight 189 g",
                 "storage": ["128GB"],
-                "color": ["Gray", "Blue"]
+                "color": ["Black", "Green"]
             }
         },
         {
@@ -291,6 +380,16 @@
             "name": "Xiaomi Readmi Pad",
             "price": 5990000,
             "type": {
+                "screen" : "10.61 inch IPS LCD",
+                "os" : "Android 12",
+                "backCamera" : "8 MP",
+                "fontCamera" : "8 MP",
+                "chip" : "MediaTek Helio G99",
+                "ram" : "4 GB",
+                "battery" : "8000 mAh, 10W",
+                "sim" : "None",
+                "material":"Metal Frame & Back",
+                "demension":"Length 250.38 mm - Width 157.98 mm - Thickness 7.05 mm - Weight 445 g",
                 "storage": ["128GB"],
                 "color": ["Gray", "Blue", "Sliver"]
             }
