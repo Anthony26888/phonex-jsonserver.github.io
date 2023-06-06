@@ -1,5 +1,5 @@
 var display = document.querySelector(".container");
-var url ="http://localhost:3000/idProducts/1"
+var url ="http://localhost:3000/idProducts/14"
 
 /*****************************DISPLAY PROUCT */
 function displayProduct(){
@@ -37,20 +37,68 @@ function displayProduct(){
             let newDiv3 = document.createElement("div"); 
             newDiv3.classList.add("storage");
               let newtitle = document.createElement("span");
-              newtitle.innerHTML="Select Storage:";
+              newtitle.classList.add("titleStorage")
+              newtitle.innerHTML="Select Storage:<br>";
               newDiv3.appendChild(newtitle);
 
-              value.type.storage.forEach(item =>{
-                let newStorage = document.createElement("input");
-                newStorage.type=""
-              })
+              
+              value.type.storage.forEach(item =>{  
+                let newInput = document.createElement("input");
+                newInput.setAttribute("id", `radio${item}`);  
+                newInput.setAttribute('type', 'radio');  
+                newInput.setAttribute('name', 'storage'); 
+                newInput.value = item; 
 
-            newDiv2.appendChild(newDiv3)
+                let newLabel = document.createElement("label");
+                newLabel.classList.add("radioStorage");
+                newLabel.setAttribute("for", `radio${item}`);
+                newLabel.innerHTML=`${item}`;
+
+                
+                newDiv3.appendChild(newInput);
+                newDiv3.appendChild(newLabel);
+              });   
+
+
+
+            let newDiv4 = document.createElement("div"); 
+            newDiv4.classList.add("color");
+              let newtitle1 = document.createElement("span");
+              newtitle1.classList.add("titleStorage")
+              newtitle1.innerHTML="Select Color:<br>";
+              newDiv4.appendChild(newtitle1);
+  
+                
+              value.type.color.forEach(item =>{                 
+                let newInput1 = document.createElement("input");
+                newInput1.setAttribute("id", `radio${item}`);  
+                newInput1.setAttribute('type', 'radio');  
+                newInput1.setAttribute('name', 'color'); 
+                newInput1.value = item; 
+  
+                let newLabel1 = document.createElement("label");
+                newLabel1.classList.add("radioColor");
+                newLabel1.setAttribute("for", `radio${item}`);
+                newLabel1.innerHTML=`<img src="img/color/${item}.jpg" alt="">`;
+  
+                  
+                newDiv4.appendChild(newInput1);
+                newDiv4.appendChild(newLabel1);
+              });  
+              
+            
+            let newDiv5 = document.createElement("div"); 
+            newDiv5.classList.add("groupButton");
+            newDiv5.innerHTML=`
+              <button class="atcDetail">Add To Cart</button>
+              <span>or</span>
+              <button class="iPDetail">Installment Payment</button>
+            `
             
 
-            
-
-          
+          newDiv1.appendChild(newDiv3)
+          newDiv1.appendChild(newDiv4)
+          newDiv1.appendChild(newDiv5)
         display.appendChild(newDiv);
         display.appendChild(newDiv1);
         });
