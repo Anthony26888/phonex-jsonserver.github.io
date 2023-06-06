@@ -54,6 +54,15 @@
             "name": "Iphone 14 Pro",
             "price": 24990000,
             "type": {
+                "screen" : "OLED, 6.1 inch, Supper Retina XDR",
+                "backCamera" : "Main: 48MP, Secondary: 12 MP, 12 MP",
+                "fontCamera" : "12 MP",
+                "chip" : "Apple A16 Bionic",
+                "ram" : "6 GB",
+                "battery" : "3200 mAh, 20W",
+                "sim" : "1 Nano SIM & 1 eSIM",
+                "material":"Stainless Steel Frame & Tempered Glass Back",
+                "Dimensions":"Length 147.5 mm - Width 71.5 mm - Thickness 7.85 mm - Weight 206 g",
                 "storage": ["128GB", "256GB", "512GB"],
                 "color": ["Yellow", "Sliver", "Purple", "Black"]
             }
@@ -66,7 +75,16 @@
             "image": "ipad-pro-m1.png",
             "name": "Ipad Pro M1",
             "price": 44990000,
-                "type": {
+            "type": {
+                "screen" : "11 inch, Liquid Retina",
+                "backCamera" : "Main: 12MP, Secondary: 10 MP",
+                "fontCamera" : "12 MP",
+                "chip" : "Apple M1",
+                "ram" : "16 GB",
+                "battery" : "7538 mAh, 20W",
+                "sim" : "1 Nano SIM & 1 eSIM",
+                "material":"Solid aluminum",
+                "Dimensions":"Length 247.6 mm - Width 178.5 mm - Thickness 5.9 mm - Weight 466 g",
                 "storage": ["1TB"],
                 "color": ["Sliver", "Gray"]
             }
@@ -80,6 +98,10 @@
             "name": "Apple Watch Ultra Alpine",
             "price": 18990000,
             "type": {
+                "screen" : "OLED1.92 inch",
+                "battery" : "36 hours(normal), 60 hours(savelife)",
+                "Dimensions":"Length 49 mm - Width 44 mm - Thickness 14.4 mm - Weight 61.3 g",
+                "sim" : "eSIM",
                 "size": ["44mm"],
                 "storage": ["32GB"],
                 "color": ["Sliver", "Gray"]
@@ -94,6 +116,16 @@
             "name": "Nokia C21 Plus",
             "price": 2390000,
             "type": {
+                "screen" : "TFT LCD 6.5 inch, HD+",
+                "os" : "Android 13",
+                "backCamera" : "Main: 13MP, Secondary: 2 MP",
+                "fontCamera" : "5 MP",
+                "chip" : "Spreadtrum SC9863A",
+                "ram" : "3 GB",
+                "battery" : "5050 mAh, 10W",
+                "sim" : "2 Nano SIM",
+                "material":"Aluminum Alloy Frame & Plastic Back",
+                "Dimensions":"Length 164.8 mm - Width 75.9 mm - Thickness 8.55 mm - Weight 191 g",
                 "storage": ["64GB", "32GB"],
                 "color": ["Gray", "Blue"]
             }
@@ -107,6 +139,16 @@
             "name": "Oppo Find N2",
             "price": 19990000,
             "type": {
+                "screen" : "AMOLEDChính 6.8 inch, secondary 3.26 inch Full HD+",
+                "os" : "Android 13",
+                "backCamera" : "Main: 13MP, Secondary: 2 MP",
+                "fontCamera" : "5 MP",
+                "chip" : "MediaTek Dimensity 9000+ 8 core",
+                "ram" : "8 GB",
+                "battery" : "4300 mAh, 10W",
+                "sim" : "2 Nano SIM",
+                "material":"Alloy Frame & 5 . Gorilla Glass Back",
+                "Dimensions":"Length 166.2 mm - Width 75.2 mm - Thickness 7.45 mm - Weight 191 g",
                 "storage": ["256GB"],
                 "color": ["Purple", "Black"]
             }
@@ -120,6 +162,16 @@
             "name": "Realme C55",
             "price": 4590000,
             "type": {
+                "screen" : "IPS LCD6.72 inch Full HD+",
+                "os" : "Android 13",
+                "backCamera" : "Main: 64MP, Secondary: 2 MP",
+                "fontCamera" : "8 MP",
+                "chip" : "MediaTek Helio G88",
+                "ram" : "6 GB",
+                "battery" : "5000 mAh, 10W",
+                "sim" : "2 Nano SIM",
+                "material":"Plastic Frame & Back",
+                "Dimensions":"Length 165.65 mm - Width 75.98 mm - Thickness 7.89 mm - Weight 189.5 g",
                 "storage": ["128GB"],
                 "color": ["Gold", "Black"]
             }
