@@ -37,42 +37,42 @@ function displayCard(){
         data.forEach((value,key) => {    
             let newDiv = document.createElement("div");    
             let newUl = document.createElement("ul");
-            newDiv.classList.add("card");          
+            newDiv.classList.add("card"); 
             
-            
-            let newImage = new Image();
-            newImage.src = "img/products/" + value.image;
-            newDiv.appendChild(newImage);
+              let newImage = new Image();
+              newImage.src = "img/products/" + value.image;
+              
+              newDiv.appendChild(newImage);
 
-            /*display name */
-            let newTitle = document.createElement("h4");
-            newTitle.classList.add("title");
-            newTitle.innerHTML = value.name;
-            newDiv.appendChild(newTitle);
+              /*display name */
+              let newTitle = document.createElement("h4");
+              newTitle.classList.add("title");
+              newTitle.innerHTML = value.name;
+              newDiv.appendChild(newTitle);
 
-            /*display storage*/    
-            value.type.storage.forEach(item =>{        
-              let newStorage = document.createElement("li"); 
-              newStorage.classList.add("storage");            
-              newStorage.innerHTML = item;
-              newUl.appendChild(newStorage);    
-            });      
-            newDiv.appendChild(newUl);
+              /*display storage*/    
+              value.type.storage.forEach(item =>{        
+                let newStorage = document.createElement("li"); 
+                newStorage.classList.add("storage");            
+                newStorage.innerHTML = item;
+                newUl.appendChild(newStorage);    
+              });      
+              newDiv.appendChild(newUl);
 
-            /*display price */
-            let newPrice = document.createElement("strong");
-            newPrice.classList.add("price");
-            newPrice.innerHTML = value.price.toLocaleString() + 'đ';
-            newDiv.appendChild(newPrice);
-            
+              /*display price */
+              let newPrice = document.createElement("strong");
+              newPrice.classList.add("price");
+              newPrice.innerHTML = value.price.toLocaleString() + 'đ';
+              newDiv.appendChild(newPrice);
+              
 
-            /*display add to cart*/
-            let newButton = document.createElement("button");  
-            newButton.classList.add("add-to-cart"); 
-            newButton.value=`${key}`  
-            newButton.innerHTML = 'ADD TO CART';
-            newButton.onclick = (function () {AddToCart(this)});
-            newDiv.appendChild(newButton); 
+              /*display add to cart*/
+              let newButton = document.createElement("button");  
+              newButton.classList.add("add-to-cart"); 
+              newButton.value=`${key}`  
+              newButton.innerHTML = 'ADD TO CART';
+              newButton.onclick = (function () {AddToCart(this)});
+              newDiv.appendChild(newButton); 
             
             list.appendChild(newDiv);
       });
@@ -95,23 +95,20 @@ function showMore() {
 }
 
 
+/**************************export index */
+document.querySelector(".card").addEventListener('click', index)
+function index(){
+  alert("111")
+}
+
+
 
 
 /********************ADD TO CART */
 
 let listCarts = [];
 function AddToCart(item){
-  /*
-  fetch(valueItem)
-      .then((response) => response.json())
-      .catch(error => console.log(error))
-      .then(data => {
-        if (listCart[key] == null) {
-          listCarts[key] = JSON.parse(JSON.stringify(data[key]));
-          listCarts[key].quantity = 1;          
-        }
-      })
-      */
+
   fetch(url)
     .then((response) => response.json())
     .catch(error => console.log(error))
@@ -157,6 +154,11 @@ function reloadCart() {
   });
 }
 
+
+
+
+
+
 /**********************TOTAL PRICE IN CART */
 
 function changeQuantity(key, quantity) {
@@ -173,6 +175,9 @@ function changeQuantity(key, quantity) {
     })
   reloadCart();
 }
+
+
+
 
 
 
@@ -256,12 +261,7 @@ filters.addEventListener("submit", function (event) {
   }else{
     type = "";
   }
-  
-  
   valueItem = Price +  '&' + System + '&' + storage + '&' + type;
-  
-
-  
   displayCard(valueItem);
 });
 
@@ -315,3 +315,9 @@ function showSlide(n) {
   }
   slides[slideIndex - 1].style.display = "block";
 }
+
+
+
+
+/**********************************export index */
+
