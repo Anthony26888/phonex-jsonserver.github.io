@@ -70,7 +70,7 @@
                 "material":"Stainless Steel Frame & Tempered Glass Back",
                 "demension":"Length 147.5 mm - Width 71.5 mm - Thickness 7.85 mm - Weight 206 g",
                 "storage": ["128GB", "256GB", "512GB"],
-                "color": ["Yellow", "Sliver", "Purple", "Black"]
+                "color": ["Yellow", "Silver", "Purple", "Black"]
             }
         },
         {
@@ -94,7 +94,7 @@
                 "material":"Solid aluminum",
                 "demension":"Length 247.6 mm - Width 178.5 mm - Thickness 5.9 mm - Weight 466 g",
                 "storage": ["1TB"],
-                "color": ["Sliver", "Gray"]
+                "color": ["Silver", "Gray"]
             }
         },
         {
@@ -117,7 +117,7 @@
                 "sim" : "eSIM",
                 "size": ["44mm"],
                 "storage": ["32GB"],
-                "color": ["Sliver", "Gray"]
+                "color": ["Silver", "Gray"]
             }
         },
         {
@@ -213,7 +213,7 @@
                 "material":"Aluminum frame & Tempered glass back",
                 "demension":"Length 155.1 mm - Width 130.1 mm - Thickness 6.3 mm - Weight 263 g",
                 "storage": ["256GB", "512GB"],
-                "color": ["Cream", "Black", "Moss green"]
+                "color": ["Black", "Green"]
             }
         },
         {
@@ -237,7 +237,7 @@
                 "material":"Aluminum frame & Tempered glass back",
                 "demension":"Length 165.2 mm - Width 71.9 mm - Thickness 6.9 mm - Weight 187 g",
                 "storage": ["128GB","256GB", "512GB"],
-                "color": ["Purle", "Blue", "Gold", "Gray"]
+                "color": ["Purple", "Blue", "Gold", "Gray"]
             }
         },
         {
@@ -286,7 +286,7 @@
                 "material":"Aluminum frame & Tempered glass back",
                 "demension":"Length 246.8 mm - Width 161.9 mm - Thickness 6.9 mm - Weight 508 g",
                 "storage": ["64GB"],
-                "color": ["Sliver", "Gray"]
+                "color": ["Silver", "Gray"]
             }
         },
         {
@@ -335,7 +335,7 @@
                 "material":"Plastic Frame & Glass Back",
                 "demension":"Length 160.87 mm - Width 74.28 mm - Thickness 7.6 mm - Weight 172 g",
                 "storage": ["128GB"],
-                "color": ["Pink Blue", "Black"]
+                "color": ["Pink", "Black"]
             }
         },
         {

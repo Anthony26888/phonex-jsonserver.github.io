@@ -1,4 +1,5 @@
 {
     "/idProducts/:id": "/products?id=:id",
-    "/products/:id/type": "/products/:id/type"
+    "/products/:id/type": "/products/:id/type",
+    "/phonex/dtdd": "/product-detail.html"
 }

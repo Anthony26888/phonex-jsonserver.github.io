@@ -96,10 +96,6 @@ function showMore() {
 
 
 /**************************export index */
-document.querySelector(".card").addEventListener('click', index)
-function index(){
-  alert("111")
-}
 
 
 

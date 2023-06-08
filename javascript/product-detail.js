@@ -1,5 +1,5 @@
 var display = document.querySelector(".container");
-var url ="http://localhost:3000/idProducts/2"
+var url ="http://localhost:3000/idProducts/3"
 
 /*****************************DISPLAY PROUCT */      
 function displayProduct(){
@@ -173,22 +173,22 @@ displayProduct();
 
 
 /***************************************SILDER SHOW */
-var slideIndex = 1;
+let slideIndexs = 1;
 showDivs(slideIndex);
 
 function plusDivs(n) {
-  showDivs(slideIndex += n);
+  showDivs(slideIndexs += n);
 }
 
 function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
+  if (n > x.length) {slideIndexs = 1}
+  if (n < 1) {slideIndexs = x.length} ;
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndex-1].style.display = "block";
+  x[slideIndexs-1].style.display = "block";
 }
 
 
@@ -233,6 +233,8 @@ function tab2(){
   tab2.style.display="block"
 }
 
+
+/**************************************import */
 
 
 
