@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phone X</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/product-detail.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdn.tgdd.vn/mwgcart/mwgcore/ContentMwg/images/DMX/Global/Desktop/Logo-webmoi.webp"/>
   </head>
@@ -50,123 +51,123 @@
         </div>
       </div>
     </header>
-
-    <div class="slide">
-      <div class="slider">
-        <img src="img/slide/12c-800-200-800x200.png" alt="banner-1" />
-      </div>
-      <div class="slider">
-        <img src="img/slide/a34-800-200-800x200.png" alt="banner-2" />
-      </div>
-      <div class="slider">
-        <img src="img/slide/iP-11-800-200-800x200.png" alt="banner-3" />
-      </div>
-      <div class="slider">
-        <img src="img/slide/nokia-g22-800-200-800x200-2.png" alt="banner-4" />
-      </div>
-      <div class="slider">
-        <img src="img/slide/realme-C55-800-200-800x200-1.png" alt="banner-5" />
-      </div>
-      <div class="slider">
-        <img src="img/slide/reno8t-800-200-800x200.png" alt="banner-6" />
-      </div>
-      <div class="slider">
-        <img src="img/slide/s23-800-200-800x200-3.png" alt="banner-7" />
-      </div>
-      <div class="slider">
-        <img src="img/slide/vivo-V27e--800-200-800x200.png" alt="banner-8" />
-      </div>
-
-      <!--next/pre-->
-      <a class="prev" onclick="plusSlide(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlide(+1)">&#10095;</a>
-    </div>
-
-    <div class="filter-product">
-      <div class="logo-filter">
-        <div class="brand" data-value="Apple" onclick="filter(this)">
-          <img src="img/logo-brand/logo-iphone-220x48.png" alt="Apple" />
+    <div class="containerIndex">
+      <div class="slide">
+        <div class="slider">
+          <img src="img/slide/12c-800-200-800x200.png" alt="banner-1" />
         </div>
-        <div class="brand" data-value="Samsung" onclick="filter(this)">
-          <img src="img/logo-brand/samsungnew-220x48-1.png" alt="Samsung" />
+        <div class="slider">
+          <img src="img/slide/a34-800-200-800x200.png" alt="banner-2" />
         </div>
-        <div class="brand" data-value="Nokia" onclick="filter(this)">
-          <img src="img/logo-brand/Nokia42-b_21.jpg" alt="Nokia" />
+        <div class="slider">
+          <img src="img/slide/iP-11-800-200-800x200.png" alt="banner-3" />
         </div>
-        <div class="brand" data-value="Xiaomi" onclick="filter(this)">
-          <img src="img/logo-brand/logo-xiaomi-220x48-5.png" alt="Xiaomi" />
+        <div class="slider">
+          <img src="img/slide/nokia-g22-800-200-800x200-2.png" alt="banner-4" />
         </div>
-        <div class="brand" data-value="Oppo" onclick="filter(this)">
-          <img src="img/logo-brand/OPPO42-b_5.jpg" alt="Oppo" />
+        <div class="slider">
+          <img src="img/slide/realme-C55-800-200-800x200-1.png" alt="banner-5" />
         </div>
-        <div class="brand" data-value="Realme" onclick="filter(this)">
-          <img src="img/logo-brand/Realme42-b_37.png" alt="Realme" />
+        <div class="slider">
+          <img src="img/slide/reno8t-800-200-800x200.png" alt="banner-6" />
         </div>
-        <div class="brand" data-value="Vivo" onclick="filter(this)">
-          <img src="img/logo-brand/vivo-logo-220-220x48-3.png" alt="Vivo" />
+        <div class="slider">
+          <img src="img/slide/s23-800-200-800x200-3.png" alt="banner-7" />
         </div>
-      </div>
-
-      <form class="filter">
-        <div class="item">
-          <select name="type" id="type">
-            <option value="" disabled selected hidden>Type</option>
-            <option value="Mobile">Mobile</option>
-            <option value="Tablet">Tablet</option>
-            <option value="SmartWatch">SmartWatch</option>
-            <option value="Laptop">Laptop</option>
-            <option value="Accessory">Accessory</option>
-          </select>
+        <div class="slider">
+          <img src="img/slide/vivo-V27e--800-200-800x200.png" alt="banner-8" />
         </div>
 
-        <div class="item">
-          <select name="price" id="price">
-            <option value="" disabled selected hidden>Price</option>
-            <option value='0,5000000'>0 - 5,000,000 đ</option>
-            <option value="5000000,10000000">5,000,000 - 10,000,000</option>
-            <option value="10000000,20000000">10,000,000 - 20,000,000</option>
-            <option value="20000000,30000000">20,000,000 - 30,000,000</option>
-            <option value="30000000, 50000000">30,000,000 - 50,000,000</option>
-          </select>
+        <!--next/pre-->
+        <a class="prev" onclick="plusSlide(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlide(+1)">&#10095;</a>
+      </div>
+
+      <div class="filter-product">
+        <div class="logo-filter">
+          <div class="brand" data-value="Apple" onclick="filter(this)">
+            <img src="img/logo-brand/logo-iphone-220x48.png" alt="Apple" />
+          </div>
+          <div class="brand" data-value="Samsung" onclick="filter(this)">
+            <img src="img/logo-brand/samsungnew-220x48-1.png" alt="Samsung" />
+          </div>
+          <div class="brand" data-value="Nokia" onclick="filter(this)">
+            <img src="img/logo-brand/Nokia42-b_21.jpg" alt="Nokia" />
+          </div>
+          <div class="brand" data-value="Xiaomi" onclick="filter(this)">
+            <img src="img/logo-brand/logo-xiaomi-220x48-5.png" alt="Xiaomi" />
+          </div>
+          <div class="brand" data-value="Oppo" onclick="filter(this)">
+            <img src="img/logo-brand/OPPO42-b_5.jpg" alt="Oppo" />
+          </div>
+          <div class="brand" data-value="Realme" onclick="filter(this)">
+            <img src="img/logo-brand/Realme42-b_37.png" alt="Realme" />
+          </div>
+          <div class="brand" data-value="Vivo" onclick="filter(this)">
+            <img src="img/logo-brand/vivo-logo-220-220x48-3.png" alt="Vivo" />
+          </div>
         </div>
 
-        <div class="item">
-          <select name="system" id="system">
-            <option value="" disabled selected hidden>System</option>
-            <option value="Android">Android</option>
-            <option value="IOS">Iphone (IOS)</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
+        <form class="filter">
+          <div class="item">
+            <select name="type" id="type">
+              <option value="" disabled selected hidden>Type</option>
+              <option value="Mobile">Mobile</option>
+              <option value="Tablet">Tablet</option>
+              <option value="SmartWatch">SmartWatch</option>
+              <option value="Laptop">Laptop</option>
+              <option value="Accessory">Accessory</option>
+            </select>
+          </div>
 
-        <div class="item">
-          <select name="storage" id="storage">
-            <option value="" disabled selected hidden>Storage</option>
-            <option value="64GB">64GB</option>
-            <option value="128GB">128GB</option>
-            <option value="256GB">256GB</option>
-            <option value="512GB">512GB</option>
-            <option value="1TB">1TB</option>
-          </select>
-        </div>
+          <div class="item">
+            <select name="price" id="price">
+              <option value="" disabled selected hidden>Price</option>
+              <option value='0,5000000'>0 - 5,000,000 đ</option>
+              <option value="5000000,10000000">5,000,000 - 10,000,000</option>
+              <option value="10000000,20000000">10,000,000 - 20,000,000</option>
+              <option value="20000000,30000000">20,000,000 - 30,000,000</option>
+              <option value="30000000, 50000000">30,000,000 - 50,000,000</option>
+            </select>
+          </div>
 
-        <div class="item submit">
-          <button class="search">Search</button>
-        </div>
-      </form>
+          <div class="item">
+            <select name="system" id="system">
+              <option value="" disabled selected hidden>System</option>
+              <option value="Android">Android</option>
+              <option value="IOS">Iphone (IOS)</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
 
-      
+          <div class="item">
+            <select name="storage" id="storage">
+              <option value="" disabled selected hidden>Storage</option>
+              <option value="64GB">64GB</option>
+              <option value="128GB">128GB</option>
+              <option value="256GB">256GB</option>
+              <option value="512GB">512GB</option>
+              <option value="1TB">1TB</option>
+            </select>
+          </div>
+
+          <div class="item submit">
+            <button class="search">Search</button>
+          </div>
+        </form>
+        
+      </div>
+
     
-      
-      
-    </div>
-
-    <div class="container2">
       <div class="list"></div>
       <button class="showMoreItem" onclick="showMore()">
         <span>Show More</span><br>            
       </button>
     </div>
+
+
+    <div class="containerDetail"></div>
+
 
     <div class="footer">
       <span class="logo">PHONE X</span>
@@ -244,7 +245,6 @@
       </div>
     </div>
     <script src="javascript/script.js"></script>
-    
     
   </body>
 </html>

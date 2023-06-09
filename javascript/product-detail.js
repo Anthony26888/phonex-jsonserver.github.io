@@ -1,9 +1,10 @@
-var display = document.querySelector(".container");
-var url ="http://localhost:3000/idProducts/3"
+var display = document.querySelector(".containerDetail");
+
 
 /*****************************DISPLAY PROUCT */      
 function displayProduct(){
-  fetch(url)
+  var urlDetail =`http://localhost:3000/idProducts/`
+  fetch(urlDetail)
       .then((response) => response.json())
       .catch(error => console.log(error))
       .then(data => { 
@@ -174,7 +175,7 @@ displayProduct();
 
 /***************************************SILDER SHOW */
 let slideIndexs = 1;
-showDivs(slideIndex);
+showDivs(slideIndexs);
 
 function plusDivs(n) {
   showDivs(slideIndexs += n);
@@ -194,27 +195,6 @@ function showDivs(n) {
 
 
 
-
-/********************ADD TO CART */
-
-
-  
-/***********************OPEN - CLOSE MODAL CART */
-function closeCart() {
-    document.querySelector(".modal-cart").style.display = "none";  
-    
-}
-function OpenCart() {
-    document.querySelector(".modal-cart").style.display = "block";  
-}
-
-
-/*****************************************FILTER CATEGORY */
-function menu(item) {
-    let buttonValue = item.getAttribute("data-value");
-    valueItem = "kind=" + buttonValue;  
-    displayCard(valueItem);
-}
 
 
 

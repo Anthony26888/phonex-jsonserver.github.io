@@ -183,7 +183,13 @@ h1,h2, h3, h4, h5, h6{
 
 /**************************** body*******************************/
 
+.containerIndex{
+  display: block;
+}
 
+.containerDetail{
+  display: block;
+}
 
 h1, h2, h3, h4, h5, span{
   font-family: 'Noto Sans', sans-serif;
@@ -1011,3 +1017,27 @@ select option:checked{
   }
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
