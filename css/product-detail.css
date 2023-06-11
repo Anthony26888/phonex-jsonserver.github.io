@@ -9,21 +9,17 @@
 
 /*********************************************** CONTAINER DETAIL****/
 .containerDetail {
-  position: relative;
-  top:180px;
-  left:50%;
-  transform: translate(-50%,0);
-  width: 1200px;
-  height: 2000px;
+  margin:50px auto;
+  width: 1200px;  
+  height: auto;
   z-index: 0;
   display: none;
+  
   
 }
 /****************IMAGE-PRODUCT */
 .imageProduct {
-  position: absolute;
-  top:0;
-  left:0;
+ 
   width: 700px;
   height: 550px;
   border-radius: 20px;  
@@ -32,8 +28,7 @@
   
 
 
-.mySlides{
-  
+.mySlides{  
   width: 700px;
   height: 550px;
   border-radius: 20px;  
@@ -68,10 +63,9 @@
   cursor: pointer;
 }
 
-.infoProduct {
-  position: absolute;
-  top:0px;
-  right:0;
+.infoProduct {  
+  margin-top: -550px;
+  margin-left: 66.5%;
   width: 400px;
   height: 550px;
   
@@ -100,8 +94,7 @@
 }
 
 .storage {
-  position: absolute;
-  top: 150px;
+  
   width: 100%;
   height: 100px;
 }
@@ -138,8 +131,6 @@
 
 
 .color {
-  position: absolute;
-  top: 280px;
   width: 100%;
   height: 100px;
 }
@@ -174,8 +165,7 @@
 }
 
 .groupButton {
-  position: relative;
-  top: 350px;
+  margin-top:200px ;  
   display: flex;
   width: 100%;
   height:50px;
@@ -227,7 +217,7 @@
   position: relative;
   width: 100%;
   height:550px;  
-  top:700px;
+  top:200px;
   left:0;
 }
 .Tab{

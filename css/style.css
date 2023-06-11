@@ -14,11 +14,11 @@ h1,h2, h3, h4, h5, h6{
 }
 
 .navbar {
-  position: fixed;
+  
   width: 100%;
   height: 110px;
-  top:-5px;
-  left:-5px;  
+  margin: -10px auto; 
+  padding: 1rem;
   background-color: #fbfbfd;
   border-bottom: 1px solid #e0e0e0;
   box-shadow: 0 0 10px #e0e0e0;
@@ -137,41 +137,167 @@ h1,h2, h3, h4, h5, h6{
 
 /********************************** SLIDE*/
 .slide{  
+  margin: 30px auto;
+  
   width: 800px;
   height:200px;
-  position: relative;
-  top:120px;
-  left:50%;
-  transform: translate(-50%,0);
+ 
+}
+
+.boxSlide{
+  position: absolute;
 }
 
 .slide .slider{
   display: block;
-  position: absolute;
+  
 }
 
 .prev{
   position: absolute;
-  left: 20px;
   top:50%;
+  left:20px;
   transform: translate(0, -50%);
   border: 0;
   padding: 15px 10px;
-  background-color: #fff;
+  background-color: rgb(210,210,215, 0.64) ;
   font-size: 15px;
   cursor: pointer;
 }
 
 .next{
   position: absolute;
-  right: 20px;
   top:50%;
+  right:20px;
   transform: translate(0, -50%);
   border: 0;
   padding: 15px 10px;
-  background-color: #fff;
+  background-color: rgb(210,210,215, 0.64);
   font-size: 15px;
   cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/*****************************************FILTER PRODUCT*/
+.filter-product{
+  margin:30px auto;
+  width: 1000px;
+  height:200px;  
+}
+
+/************************Filter********************************/
+
+.filter {
+  margin-top: 20px;
+  width: 1000px;  
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+}
+
+.filter .item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+select{
+  width: 100%;
+  height: 25px;
+  border: 0.5px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
+  overflow-y: scroll;
+}
+
+
+
+
+select option:checked{
+  background-color: #ccc;
+}
+
+
+.search {
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  font-weight: 700;
+  background: rgb(255, 255, 255);
+  color: blueviolet;
+  border-radius: .5rem;
+  border-bottom: 2px solid blueviolet;
+  border-right: 2px solid blueviolet;
+  border-top: 2px solid blueviolet;
+  border-left: 2px solid blueviolet;
+  transition-duration: 1s;
+  cursor: pointer;
+  transition-property: border-top,
+    border-left,
+    border-bottom,
+    border-right,
+    box-shadow;
+}
+
+.search:hover {
+  border-top: 2px solid blueviolet;
+  border-left: 2px solid blueviolet;
+  border-bottom: 2px solid rgb(238, 103, 238);
+  border-right: 2px solid rgb(238, 103, 238);
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
+}
+
+
+
+/********************************** Logo -filter*/
+.logo-filter{  
+  display: grid;  
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  width: 1000px;  
+  list-style: none;
+}
+
+.logo-filter .brand{
+  cursor: pointer;
+  width: 100%;    
+}
+
+.logo-filter .brand img:hover{
+  border:1px solid  #288ad6;
+}
+
+
+.logo-filter .brand img{
+  width:100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+}
+
+
+
+.result{
+  display: flex;
+  list-style: none;
+  position: absolute;
+  top:470px;
+  left:50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #e0e0e0;
+  width: 200px;
+
+}
+
+.result li{
+  padding: 5px 5px;
+  margin-left: 5px;
 }
 
 
@@ -185,6 +311,7 @@ h1,h2, h3, h4, h5, h6{
 
 .containerIndex{
   display: block;
+  
 }
 
 .containerDetail{
@@ -197,13 +324,11 @@ h1, h2, h3, h4, h5, span{
 
 
 .list {
-  margin: 330px auto;
+  margin: -30px auto;  
   width: 1000px;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 240px 240px 240px 240px;
-  
-  
   
 }
 
@@ -314,6 +439,108 @@ h1, h2, h3, h4, h5, span{
 
 
 
+
+
+
+
+
+
+
+
+
+/**********************************SHOW MORE PAGE****/
+.showMoreItem{  
+  display: flex;
+  margin:100px auto;
+  list-style: none;
+  width:150px;
+  background-color: #ffffff;
+  border: 1px solid #bbb;
+  cursor: pointer;
+}
+
+.showMoreItem:hover{
+  color:#2f80ed;
+  border-color: #2f80ed;
+}
+
+.showMoreItem span{
+  text-align: center;
+  padding: 5px 32px;
+}
+
+
+
+
+
+
+
+
+
+/*************************************fOOTER*/
+
+.footer{
+  
+  margin-top: 100px;
+  min-width: 100vh;
+  height: 200px;  
+  box-shadow: 0 0 10px #e0e0e0;  
+  background-color: #fbfbfd;
+  padding: 1rem;
+}
+
+.footer .logoFooter{
+  font-size: 40px;
+  font-family: "Bruno Ace SC", cursive;
+  margin-left: 400px;
+  margin-top: 100px;
+}
+
+.footer .distributor{
+  margin-left: 600px;
+}
+
+.footer .logo-supply{
+  margin-left: 1100px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1vh);
+  row-gap: 10px;
+  column-gap: 90px;
+
+}
+
+[class^="iconlogo-"].visible, [class*="iconlogo-"].visible {
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 24px;
+  width: 80px;
+  line-height: 30px;
+  vertical-align: middle;
+  background-size: 250px 200px;
+  background-image: url(//cdn.tgdd.vn/mwgcart/mwgcore/ContentMwg/images/DMX/Global/Desktop/Logo-webmoi.webp)
+}
+
+.iconlogo-topzone {
+  background-position: 0 -58px;
+}
+
+
+.iconlogo-dienmayxanh {
+  background-position: -85px 0;
+}
+
+.iconlogo-bachhoaxanh {
+  background-position: -170px 0;
+}
+
+.iconlogo-ankhang {
+  background-position: -85px -90px;
+}
+
+.iconlogo-tantam {
+  background-position: -170px -90px;
+}
 
 
 
@@ -641,71 +868,6 @@ h1 {
 
 
 
-/*****************************************Filter********************************/
-
-.filter {
-  position: absolute;
-  top: 420px;
-  left: 50.5%;
-  width: 1000px;
-  transform: translate(-50%, 0);
-  display: grid;
-  column-gap: 50px;
-  grid-template-columns: repeat(5, 1fr);
-  text-align: center;
-}
-
-.filter .item{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-select{
-  width: 100%;
-  height: 25px;
-  border: 0.5px solid #ccc;
-  border-radius: 5px;
-  color: #333;
-  cursor: pointer;
-  overflow-y: scroll;
-}
-
-
-
-
-select option:checked{
-  background-color: #ccc;
-}
-
-
-.search {
-  width: 100%;
-  padding: 0.25rem 1.5rem;
-  font-weight: 700;
-  background: rgb(255, 255, 255);
-  color: blueviolet;
-  border-radius: .5rem;
-  border-bottom: 2px solid blueviolet;
-  border-right: 2px solid blueviolet;
-  border-top: 2px solid blueviolet;
-  border-left: 2px solid blueviolet;
-  transition-duration: 1s;
-  cursor: pointer;
-  transition-property: border-top,
-    border-left,
-    border-bottom,
-    border-right,
-    box-shadow;
-}
-
-.search:hover {
-  border-top: 2px solid blueviolet;
-  border-left: 2px solid blueviolet;
-  border-bottom: 2px solid rgb(238, 103, 238);
-  border-right: 2px solid rgb(238, 103, 238);
-  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
-}
 
 
 
@@ -716,152 +878,14 @@ select option:checked{
 
 
 
-/********************************** Logo -filter*/
-.logo-filter{
-  display: grid;
-  position: absolute;
-  grid-template-columns: repeat(7, 1fr);
-  grid-gap: 10px;
-  width: 1000px;
-
-  position: absolute;
-  top: 350px;
-  left: 50.5%;
-  transform: translate(-50%, 0);
-  list-style: none;
-}
-
-.logo-filter .brand{
-  cursor: pointer;
-  width: 100%;    
-}
-
-.logo-filter .brand img:hover{
-  border:1px solid  #288ad6;
-}
-
-
-.logo-filter .brand img{
-  width:100%;
-  border: 1px solid #e0e0e0;
-  border-radius: 20px;
-}
-
-
-
-.result{
-  display: flex;
-  list-style: none;
-  position: absolute;
-  top:470px;
-  left:50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid #e0e0e0;
-  width: 200px;
-
-}
-
-.result li{
-  padding: 5px 5px;
-  margin-left: 5px;
-}
 
 
 
 
 
 
-/**********************************SHOW MORE PAGE****/
-.showMoreItem{  
-  display: flex;
-  margin:-250px auto;
-  list-style: none;
-  width:150px;
-  background-color: #ffffff;
-  border: 1px solid #bbb;
-  cursor: pointer;
-}
-
-.showMoreItem:hover{
-  color:#2f80ed;
-  border-color: #2f80ed;
-}
-
-.showMoreItem span{
-  text-align: center;
-  padding: 5px 32px;
-}
 
 
-
-
-/*************************************fOOTER*/
-
-.footer{
-  position: relative;  
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #e0e0e0;
-  box-shadow: 0 0 10px #e0e0e0;
-  margin:300px auto;
-  background-color: #fbfbfd;
-}
-
-.footer .logo{
-  position: absolute;
-  top:50%;
-  left:250px;
-  transform: translate(0,-50%); 
-}
-
-.footer .distributor{
-  position: absolute;
-  right:325px;
-  top:25px;
-}
-
-.footer .logo-supply{
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1vh);
-  row-gap: 10px;
-  column-gap: 90px;
-  position: absolute;
-  right:300px;
-  top:50px
-}
-
-[class^="iconlogo-"].visible, [class*="iconlogo-"].visible {
-  background-repeat: no-repeat;
-  display: inline-block;
-  height: 24px;
-  width: 80px;
-  line-height: 30px;
-  vertical-align: middle;
-  background-size: 250px 200px;
-  background-image: url(//cdn.tgdd.vn/mwgcart/mwgcore/ContentMwg/images/DMX/Global/Desktop/Logo-webmoi.webp)
-}
-
-.iconlogo-topzone {
-  background-position: 0 -58px;
-}
-
-
-.iconlogo-dienmayxanh {
-  background-position: -85px 0;
-}
-
-.iconlogo-bachhoaxanh {
-  background-position: -170px 0;
-}
-
-.iconlogo-ankhang {
-  background-position: -85px -90px;
-}
-
-.iconlogo-tantam {
-  background-position: -170px -90px;
-}
 
 
 

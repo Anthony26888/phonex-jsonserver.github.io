@@ -290,6 +290,7 @@ function submitSearch(){
 
 
 /***************************************SILDER SHOW */
+
 let slideIndex = 1;
 showSlide(slideIndex);
 
@@ -315,7 +316,7 @@ function showSlide(n) {
   }
   slides[slideIndex - 1].style.display = "block";
 
-  setTimeout(showSlide, 3000);
+  setTimeout(showSlide, 2000);
 }
 
 
