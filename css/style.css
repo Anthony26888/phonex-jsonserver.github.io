@@ -309,14 +309,11 @@ select option:checked{
 
 /**************************** body*******************************/
 
-.containerIndex{
+.main1{
   display: block;
   
 }
 
-.containerDetail{
-  display: block;
-}
 
 h1, h2, h3, h4, h5, span{
   font-family: 'Noto Sans', sans-serif;
@@ -492,7 +489,7 @@ h1, h2, h3, h4, h5, span{
 .footer .logoFooter{
   font-size: 40px;
   font-family: "Bruno Ace SC", cursive;
-  margin-left: 400px;
+  margin-left: 250px;
   margin-top: 100px;
 }
 
@@ -501,7 +498,7 @@ h1, h2, h3, h4, h5, span{
 }
 
 .footer .logo-supply{
-  margin-left: 1100px;
+  margin-left: 950px;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1vh);

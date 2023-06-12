@@ -68,15 +68,7 @@ function displayCard(){
               newPrice.innerHTML = value.price.toLocaleString() + 'đ';
               newDiv.appendChild(newPrice);
               
-
-              /*display add to cart*/
-              let newButton = document.createElement("button");  
-              newButton.classList.add("add-to-cart"); 
-              newButton.value=`${key}`  
-              newButton.innerHTML = 'ADD TO CART';
-              newButton.onclick = (function () {AddToCart(this)});
-              newDiv.appendChild(newButton); 
-            
+                         
             list.appendChild(newDiv);
       });
     if(itemsToShow !== data.length){
@@ -100,8 +92,8 @@ function showMore() {
 /*********************************open Detail */
 
 function openDetail(item){
-  let index = document.querySelector(".containerIndex");
-  let detail = document.querySelector(".containerDetail")
+  let index = document.querySelector(".main1");
+  let detail = document.querySelector(".main2")
   index.style.display="none";
   detail.style.display="block";
   let valueProduct = item.getAttribute("data-key");
@@ -354,7 +346,7 @@ function showSlide(n) {
 
 
 
-var display = document.querySelector(".containerDetail");
+var display = document.querySelector(".main2");
 
 
 /*****************************DISPLAY PROUCT */      
@@ -368,98 +360,102 @@ function displayProduct(valueDetail){
         display.innerHTML="";
   
         data.forEach((value, key) => {
+          let newElement = document.createElement("div")
+          newElement.classList.add("group1");
           
-          let newDiv = document.createElement("div");
-          
-          newDiv.classList.add("imageProduct");
-          newDiv.innerHTML=`
-            <img class="mySlides checked" src="img/detail/${value.type.imgDetail[0]}" alt="" >
-       
-            <img class="mySlides" src="img/detail/${value.type.imgDetail[1]}" alt="" style="display:none">
+            let newDiv = document.createElement("div");
             
-            <img class="mySlides" src="img/detail/${value.type.imgDetail[2]}" alt="" style="display:none">
-          
+            newDiv.classList.add("imageProduct");
+            newDiv.innerHTML=`
+              <img class="mySlides checked" src="img/detail/${value.type.imgDetail[0]}" alt="" >
+        
+              <img class="mySlides" src="img/detail/${value.type.imgDetail[1]}" alt="" style="display:none">
+              
+              <img class="mySlides" src="img/detail/${value.type.imgDetail[2]}" alt="" style="display:none">
             
-            <a class="prevDetail" onclick="plusDivs(-1)">&#10094;</a>
-            <a class="nextDetail" onclick="plusDivs(+1)">&#10095;</a>
-          `
-          
-          let newDiv1 = document.createElement("form")
-          newDiv1.classList.add("infoProduct");
-            let newDiv2 = document.createElement("div");
-            newDiv2.classList.add("name-price");
-            newDiv2.innerHTML=`
-              <span class="nameProduct">${value.name}</span><br>
-              <span class="priceProduct">${value.price.toLocaleString()} đ</span>
+              
+              <a class="prevDetail" onclick="plusDivs(-1)">&#10094;</a>
+              <a class="nextDetail" onclick="plusDivs(+1)">&#10095;</a>
             `
-            newDiv1.appendChild(newDiv2);
-
-            let newDiv3 = document.createElement("div"); 
-            newDiv3.classList.add("storage");
-              let newtitle = document.createElement("span");
-              newtitle.classList.add("titleStorage")
-              newtitle.innerHTML="Select Storage:<br>";
-              newDiv3.appendChild(newtitle);
-
-              
-              value.type.storage.forEach(item =>{  
-                let newInput = document.createElement("input");
-                newInput.setAttribute("id", `radio${item}`);  
-                newInput.setAttribute('type', 'radio');  
-                newInput.setAttribute('name', 'storage'); 
-                newInput.value = item; 
-
-                let newLabel = document.createElement("label");
-                newLabel.classList.add("radioStorage");
-                newLabel.setAttribute("for", `radio${item}`);
-                newLabel.innerHTML=`${item}`;
-
-                
-                newDiv3.appendChild(newInput);
-                newDiv3.appendChild(newLabel);
-              });   
-
-
-
-            let newDiv4 = document.createElement("div"); 
-            newDiv4.classList.add("color");
-              let newtitle1 = document.createElement("span");
-              newtitle1.classList.add("titleStorage")
-              newtitle1.innerHTML="Select Color:<br>";
-              newDiv4.appendChild(newtitle1);
-  
-                
-              value.type.color.forEach(item =>{                 
-                let newInput1 = document.createElement("input");
-                newInput1.setAttribute("id", `radio${item}`);  
-                newInput1.setAttribute('type', 'radio');  
-                newInput1.setAttribute('name', 'color'); 
-                newInput1.value = item; 
-  
-                let newLabel1 = document.createElement("label");
-                newLabel1.classList.add("radioColor");
-                newLabel1.setAttribute("for", `radio${item}`);
-                newLabel1.innerHTML=`<img src="img/color/${item}.jpg" alt="">`;
-  
-                  
-                newDiv4.appendChild(newInput1);
-                newDiv4.appendChild(newLabel1);
-              });  
-              
             
-            let newDiv5 = document.createElement("div"); 
-            newDiv5.classList.add("groupButton");
-            newDiv5.innerHTML=`
-              <button class="atcDetail" onclick="AddToCart()" value="${key}">Add To Cart</button>
-              <span>or</span>
-              <button class="iPDetail">Installment Payment</button>`
-            newDiv1.appendChild(newDiv3);
-            newDiv1.appendChild(newDiv4);
-            newDiv1.appendChild(newDiv5);
+            let newDiv1 = document.createElement("form")
+            newDiv1.classList.add("infoProduct");
+              let newDiv2 = document.createElement("div");
+              newDiv2.classList.add("name-price");
+              newDiv2.innerHTML=`
+                <span class="nameProduct">${value.name}</span><br>
+                <span class="priceProduct">${value.price.toLocaleString()} đ</span>
+              `
+              newDiv1.appendChild(newDiv2);
+
+              let newDiv3 = document.createElement("div"); 
+              newDiv3.classList.add("storage");
+                let newtitle = document.createElement("span");
+                newtitle.classList.add("titleStorage")
+                newtitle.innerHTML="Select Storage:<br>";
+                newDiv3.appendChild(newtitle);
+
+                
+                value.type.storage.forEach(item =>{  
+                  let newInput = document.createElement("input");
+                  newInput.setAttribute("id", `radio${item}`);  
+                  newInput.setAttribute('type', 'radio');  
+                  newInput.setAttribute('name', 'storage'); 
+                  newInput.value = item; 
+
+                  let newLabel = document.createElement("label");
+                  newLabel.classList.add("radioStorage");
+                  newLabel.setAttribute("for", `radio${item}`);
+                  newLabel.innerHTML=`${item}`;
+
+                  
+                  newDiv3.appendChild(newInput);
+                  newDiv3.appendChild(newLabel);
+                });   
+
+
+
+              let newDiv4 = document.createElement("div"); 
+              newDiv4.classList.add("color");
+                let newtitle1 = document.createElement("span");
+                newtitle1.classList.add("titleStorage")
+                newtitle1.innerHTML="Select Color:<br>";
+                newDiv4.appendChild(newtitle1);
+    
+                  
+                value.type.color.forEach(item =>{                 
+                  let newInput1 = document.createElement("input");
+                  newInput1.setAttribute("id", `radio${item}`);  
+                  newInput1.setAttribute('type', 'radio');  
+                  newInput1.setAttribute('name', 'color'); 
+                  newInput1.value = item; 
+    
+                  let newLabel1 = document.createElement("label");
+                  newLabel1.classList.add("radioColor");
+                  newLabel1.setAttribute("for", `radio${item}`);
+                  newLabel1.innerHTML=`<img src="img/color/${item}.jpg" alt="">`;
+    
+                    
+                  newDiv4.appendChild(newInput1);
+                  newDiv4.appendChild(newLabel1);
+                });  
+                
+              
+              let newDiv5 = document.createElement("div"); 
+              newDiv5.classList.add("groupButton");
+              newDiv5.innerHTML=`
+                <button class="atcDetail" onclick="AddToCart()" value="${key}">Add To Cart</button>
+                <span>or</span>
+                <button class="iPDetail">Installment Payment</button>`
+              newDiv1.appendChild(newDiv3);
+              newDiv1.appendChild(newDiv4);
+              newDiv1.appendChild(newDiv5);
+            newElement.appendChild(newDiv)
+            newElement.appendChild(newDiv1)
 
 
             let newDiv6 =document.createElement("div");
-            newDiv6.classList.add("detailProduct");
+            newDiv6.classList.add("group2");
             let storageDetail = JSON.parse(JSON.stringify(value.type.storage))
             newDiv6.innerHTML = `
               <div class="Tab">
@@ -516,8 +512,7 @@ function displayProduct(valueDetail){
                   </li>
                 </ul>
               </div> `
-          display.appendChild(newDiv);
-          display.appendChild(newDiv1);
+          display.appendChild(newElement);          
           display.appendChild(newDiv6);
         });
       })
@@ -551,6 +546,7 @@ function tab1(){
   let tab2 = document.querySelector(".two")
   tab1.style.display="block"
   tab2.style.display="none"
+  tab1.classList.add("itemTab")
 }
 
 function tab2(){
