@@ -106,92 +106,6 @@ function openDetail(item){
 
 
 
-/********************ADD TO CART */
-
-let listCarts = [];
-function AddToCart(item){
-
-  fetch(url)
-    .then((response) => response.json())
-    .catch(error => console.log(error))
-    .then(data => {
-      
-      valueIndex = item.value;      
-      array = data[valueIndex];
-      array.quantity =1;
-      listCarts.push(array);
-          
-      console.log(listCarts)      
-      reloadCart()
-
-      
-    })
-    
-}
-
-function reloadCart() {
-  listCart.innerHTML = "";
-  let count = 0;
-  let totalItem = 0;
-  listCarts.forEach((item, key) => {
-    count = item.quantity + count;
-    totalItem = item.price + totalItem;
-    let newli = document.createElement("li");
-
-    newli.innerHTML=`
-      <img src="img/products/${item.image}" alt="${item.name}">
-      <span>${item.name}</span>
-      <div>
-        <button onclick="changeQuantity(${key},${item.quantity} -1)">-</button>
-        <span class="Qty">${item.quantity}</span>
-        <button onclick="changeQuantity(${key},${item.quantity} + 1)">+</button>
-      </div>
-      <span>${item.price.toLocaleString()} đ</span>
-      <button class="delete" onclick = "clearLi(${key})"><span><i class="fa fa-times" aria-hidden="true"></i></span></button>
-    `
-    
-    listCart.appendChild(newli);
-    quantity.innerHTML = count;
-    total.innerHTML = totalItem.toLocaleString() + " đ";
-  });
-}
-
-
-
-
-
-
-/**********************TOTAL PRICE IN CART */
-
-function changeQuantity(key, quantity) {
-  fetch(url)
-    .then((response) => response.json())
-    .catch(error => console.log(error))
-    .then(data => {
-      if (quantity == 0) {
-        delete listCarts[key];
-      } else {
-        listCarts[key].quantity = quantity;
-        listCarts[key].price = quantity * data[key].price;
-      }
-    })
-  reloadCart();
-}
-
-
-
-
-
-
-
-/**********************remove item cart */
-function clearLi(key) {
-  delete listCarts[key];
-  if (key != null) {
-    total.innerHTML = "0" + " đ";
-  }
-  reloadCart();
-}
 
 
 /***********************OPEN - CLOSE MODAL CART */
@@ -444,7 +358,7 @@ function displayProduct(valueDetail){
               let newDiv5 = document.createElement("div"); 
               newDiv5.classList.add("groupButton");
               newDiv5.innerHTML=`
-                <button class="atcDetail" onclick="AddToCart()" value="${key}">Add To Cart</button>
+                <button class="atcDetail" onclick="AddToCart(event)" data-value="${valueDetail}">Add To Cart</button>
                 <span>or</span>
                 <button class="iPDetail">Installment Payment</button>`
               newDiv1.appendChild(newDiv3);
@@ -516,8 +430,19 @@ function displayProduct(valueDetail){
           display.appendChild(newDiv6);
         });
       })
+
 }
 displayProduct();
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -554,6 +479,89 @@ function tab2(){
   let tab2 = document.querySelector(".two")
   tab1.style.display="none"
   tab2.style.display="block"
+}
+
+
+
+
+
+
+
+
+
+/********************ADD TO CART */
+
+let listCarts = [];
+function AddToCart(event){
+  event.preventDefault();
+  let valueCart = document.querySelector(".actDetail").getAttribute("data-value");
+  console.log(valueCart)
+  
+    
+}
+
+function reloadCart() {
+  listCart.innerHTML = "";
+  let count = 0;
+  let totalItem = 0;
+  listCarts.forEach((item, key) => {
+    count = item.quantity + count;
+    totalItem = item.price + totalItem;
+    let newli = document.createElement("li");
+
+    newli.innerHTML=`
+      <img src="img/products/${item.image}" alt="${item.name}">
+      <span>${item.name}</span>
+      <div>
+        <button onclick="changeQuantity(${key},${item.quantity} -1)">-</button>
+        <span class="Qty">${item.quantity}</span>
+        <button onclick="changeQuantity(${key},${item.quantity} + 1)">+</button>
+      </div>
+      <span>${item.price.toLocaleString()} đ</span>
+      <button class="delete" onclick = "clearLi(${key})"><span><i class="fa fa-times" aria-hidden="true"></i></span></button>
+    `
+    
+    listCart.appendChild(newli);
+    quantity.innerHTML = count;
+    total.innerHTML = totalItem.toLocaleString() + " đ";
+  });
+}
+
+
+
+
+
+
+/**********************TOTAL PRICE IN CART */
+
+function changeQuantity(key, quantity) {
+  fetch(url)
+    .then((response) => response.json())
+    .catch(error => console.log(error))
+    .then(data => {
+      if (quantity == 0) {
+        delete listCarts[key];
+      } else {
+        listCarts[key].quantity = quantity;
+        listCarts[key].price = quantity * data[key].price;
+      }
+    })
+  reloadCart();
+}
+
+
+
+
+
+
+
+/**********************remove item cart */
+function clearLi(key) {
+  delete listCarts[key];
+  if (key != null) {
+    total.innerHTML = "0" + " đ";
+  }
+  reloadCart();
 }
 
 
