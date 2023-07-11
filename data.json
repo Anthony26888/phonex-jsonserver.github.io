@@ -298,7 +298,7 @@
             "name": "Samsung Galaxy Watch 5",
             "price": 5490000,
             "type": {
-                "imgDetail": ["samsung-galaxy-watch-5-40-mm-den-1.jpg", "samsung-galaxy-watch-5-40-mm-den-2.jpg","samsung-galaxy-watch-5-40-mm-den-2.jpg"],
+                "imgDetail": ["samsung-galaxy-watch-5-40-mm-den-1.jpg", "samsung-galaxy-watch-5-40-mm-den-2.jpg","samsung-galaxy-watch-5-40-mm-den-3.jpg"],
                 "screen" : "SUPER AMOLED1.2 inch",
                 "os" : "Wear OS",
                 "backCamera" : "8 MP",
@@ -311,7 +311,7 @@
                 "demension":"Length 40.4 mm - Width 39.3 mm - Thickness 9.8 mm - Weight 28.7 g",
                 "size": ["40mm", "44mm"],
                 "storage": ["16GB"],
-                "color": ["Purle", "Black"]
+                "color": ["Purple", "Black"]
             }
         },
         {

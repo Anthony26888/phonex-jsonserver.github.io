@@ -9,15 +9,12 @@
 
 /*********************************************** CONTAINER DETAIL****/
 
-
-
-
 span{
   font-family: 'Open Sans', sans-serif;
   color: rgb(29, 29, 31);
 }
 h1,h2, h3, h4, h5, h6{
-  font-family: 'Bruno Ace SC', cursive;
+  font-family: 'SF Pro Display', sans-serif;
 }
 
 .navbar {
@@ -141,7 +138,7 @@ h1,h2, h3, h4, h5, h6{
 
 .group1{
   display: flex;
-  width: 90%;
+  width:90%;
   margin:50px auto;  
 }
 
@@ -159,10 +156,8 @@ h1,h2, h3, h4, h5, h6{
   width: 700px;
   height: 550px;
   border-radius: 20px;
-  margin-left: 80px;  
+  margin-left: 250px;   
 }
-
-  
 
 
 .mySlides{  
@@ -176,7 +171,7 @@ h1,h2, h3, h4, h5, h6{
 .prevDetail{
   position: absolute;
   top:400px;
-  left:130px;
+  left:350px;
   width:52px;
   height:52px;
   font-size: 35px;  
@@ -195,7 +190,7 @@ h1,h2, h3, h4, h5, h6{
 .nextDetail{
   position: absolute;
   top:400px;
-  left:850px;
+  left:1000px;
   width:52px;
   height:52px;
   font-size: 35px;  
@@ -213,7 +208,7 @@ h1,h2, h3, h4, h5, h6{
 
 .infoProduct {    
   margin-top: 0;
-  margin-left: 100px;
+  margin-left: 50px;
   width: 400px;
   height: 550px;
   
@@ -222,19 +217,16 @@ h1,h2, h3, h4, h5, h6{
 .name-price {
   
   width: 100%;
-  height: 100px;
+  height: 150px;
 }
 
-.nameProduct {
-  font-style: normal;
+.nameProduct {  
   font-weight: 600;
   font-size: 30px;
   line-height: 41px;
 }
 
-.priceProduct {
-  
-  font-style: normal;
+.priceProduct {  
   font-weight: 400;
   font-size: 24px;
   line-height: 41px;
@@ -369,10 +361,8 @@ h1,h2, h3, h4, h5, h6{
   margin:0 auto;
   cursor: pointer;
   z-index: 2;
-  border: 1px solid black;
 }
 .Tab .itemTab{
-  display: none;
   color: black;
   border-bottom: 5px solid #e0e0e0;
   padding: 5px 5px;
@@ -380,15 +370,11 @@ h1,h2, h3, h4, h5, h6{
 
 .content{
   margin: 20px auto;
-  width: 100%;
+  width: 1000px;
   height:700px;
-  
 }
 
-.two{  
-  height: 1000px;
-  margin-left:200px;
-}
+
 
 .one{
   height: 700px;

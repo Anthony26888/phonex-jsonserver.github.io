@@ -37,7 +37,7 @@ function displayProduct() {
         let newDiv2 = document.createElement("div");
         newDiv2.classList.add("name-price");
         newDiv2.innerHTML = `
-                <span class="nameProduct">${value.name}</span><br>
+                <h4 class="nameProduct">${value.name}</h4>
                 <span class="priceProduct">${value.price.toLocaleString()} đ</span>
               `;
         newDiv1.appendChild(newDiv2);
@@ -104,8 +104,7 @@ function displayProduct() {
         newDiv6.classList.add("group2");
         let storageDetail = JSON.parse(JSON.stringify(value.type.storage));
         newDiv6.innerHTML = `
-              <div class="Tab">
-                <a class="itemTab des" onclick="tab1()">Description</a>
+              <div class="Tab">                
                 <a class="itemTab spec" onclick="tab2()">Specifications</a>
               </div>
               <div class="content one"></div>
@@ -189,20 +188,6 @@ function showDivs(n) {
 }
 
 /******************************************TAB */
-function tab1() {
-  let tab1 = document.querySelector(".one");
-  let tab2 = document.querySelector(".two");
-  tab1.style.display = "block";
-  tab2.style.display = "none";
-  tab1.classList.add("itemTab");
-}
-
-function tab2() {
-  let tab1 = document.querySelector(".one");
-  let tab2 = document.querySelector(".two");
-  tab1.style.display = "none";
-  tab2.style.display = "block";
-}
 
 
 /***********************OPEN - CLOSE MODAL CART */

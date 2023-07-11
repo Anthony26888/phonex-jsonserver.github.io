@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Foldit:wght@700&family=Vina+Sans&display=swap");
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 @import url("https://fonts.googleapis.com/css2?family=Foldit:wght@700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Foldit:wght@700&family=Noto+Sans&family=Vina+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Foldit:wght@700&family=Noto+Sans&family=Open+Sans:ital,wght@0,400;1,300;1,400&family=Vina+Sans&display=swap');
@@ -10,7 +10,7 @@ span{
   color: rgb(29, 29, 31);
 }
 h1,h2, h3, h4, h5, h6{
-  font-family: 'Bruno Ace SC', cursive;
+  font-family: 'SF Pro Display', sans-serif;
 }
 
 .navbar {
@@ -313,12 +313,6 @@ select option:checked{
   display: block;
   
 }
-
-
-h1, h2, h3, h4, h5, span{
-  font-family: 'Noto Sans', sans-serif;
-}
-
 
 .list {
   margin: -30px auto;  
