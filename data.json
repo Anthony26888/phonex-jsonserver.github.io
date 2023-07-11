@@ -82,7 +82,7 @@
             "name": "Ipad Pro M1",
             "price": 44990000,
             "type": {
-                "imgDetail": ["ipad-pro-m1-11-inch-wifi-1.jpg", "ipad-pro-m1-11-inch-wifi-2.jpg","ipad-pro-m1-11-inch-wifi-3.jpg"],
+                "imgDetail": ["ipad-pro-m1-11-inch-wifi-1.jpg", "ipad-pro-m1-11-inch-wifi-2.jpeg","ipad-pro-m1-11-inch-wifi-3.jpg"],
                 "screen" : "11 inch, Liquid Retina",
                 "os" : "iPadOS 15",
                 "backCamera" : "Main: 12MP, Secondary: 10 MP",

@@ -336,6 +336,7 @@ h1, h2, h3, h4, h5, span{
   background: rgb(255, 255, 255);
   box-shadow: rgba(60, 64, 67, 0.1) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   color:rgb(74, 74, 74);
+  text-decoration: none;
 }
 
 .hidden{

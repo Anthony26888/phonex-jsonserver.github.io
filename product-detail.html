@@ -1,80 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail</title>
     <link rel="stylesheet" href="css/product-detail.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://cdn.tgdd.vn/mwgcart/mwgcore/ContentMwg/images/DMX/Global/Desktop/Logo-webmoi.webp"/>
-</head>
-<body>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.tgdd.vn/mwgcart/mwgcore/ContentMwg/images/DMX/Global/Desktop/Logo-webmoi.webp"
+    />
+  </head>
+  <body>
     <header class="navbar">
-        <div class="nav">
-          <a href="index.html"><span class="logo">PHONE X</span></a>
-          <div class="cart" onclick="OpenCart()">
-            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-            <div class="quantity">0</div>
+      <div class="nav">
+        <a href="index.html"><span class="logo">PHONE X</span></a>
+        <div class="cart" onclick="OpenCart()">
+          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+          <div class="quantity">0</div>
+        </div>
+        <form class="looking">
+          <input
+            type="text"
+            name="search"
+            placeholder="What are you looking for?"
+            id="inputSearch"
+          />
+          <div onclick="submitSearch()">
+            <i class="fa fa-search" aria-hidden="true"></i>
           </div>
-          <form class="looking">
-            <input type="text" name="search" placeholder="What are you looking for?" id ="inputSearch"/>
-            <div onclick="submitSearch()"><i class="fa fa-search" aria-hidden="true"></i></div>
-          </form>
-          <div class="user">
-            <i class="fa fa-user" aria-hidden="true"></i>
+        </form>
+        <div class="user">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+
+        <div class="main-menu">
+          <div class="item-menu" onclick="menu(this)" data-value="Mobile">
+            <img src="img/main-menu/smartphone.png" alt="smart-phone" />
+            <span>Mobile</span>
           </div>
-  
-          <div class="main-menu">
-            <div class="item-menu" onclick="menu(this)" data-value="Mobile">
-              <img src="img/main-menu/smartphone.png" alt="smart-phone" />
-              <span>Mobile</span>
-            </div>
-            <div class="item-menu" onclick="menu(this)" data-value="Tablet">
-              <img src="img/main-menu/ipad.png" alt="Tablet" />
-              <span>Tablet</span>
-            </div>
-            <div class="item-menu" onclick="menu(this)" data-value="SmartWatch">
-              <img src="img/main-menu/watch.png" alt="smart-watch" />
-              <span>SmartWatch</span>
-            </div>
-            <div class="item-menu" onclick="menu(this)" data-value="Laptop">
-              <img src="img/main-menu/laptop.png" alt="smart-watch" />
-              <span>Laptop</span>
-            </div>
-            <div class="item-menu" onclick="menu(this)" data-value="Accessory">
-              <img src="img/main-menu/headphones.png" alt="smart-watch" />
-              <span>Accessory</span>
-            </div>
+          <div class="item-menu" onclick="menu(this)" data-value="Tablet">
+            <img src="img/main-menu/ipad.png" alt="Tablet" />
+            <span>Tablet</span>
+          </div>
+          <div class="item-menu" onclick="menu(this)" data-value="SmartWatch">
+            <img src="img/main-menu/watch.png" alt="smart-watch" />
+            <span>SmartWatch</span>
+          </div>
+          <div class="item-menu" onclick="menu(this)" data-value="Laptop">
+            <img src="img/main-menu/laptop.png" alt="smart-watch" />
+            <span>Laptop</span>
+          </div>
+          <div class="item-menu" onclick="menu(this)" data-value="Accessory">
+            <img src="img/main-menu/headphones.png" alt="smart-watch" />
+            <span>Accessory</span>
           </div>
         </div>
+      </div>
     </header>
 
-    <div class="containerDetail">
+    <div class="containerDetail"></div>
 
-        
-    </div>
-
-    <footer class="modal-cart">
-        <h1>CART</h1>
-        <ul class="listCart">
-          
-        </ul>
-        <div class="total">
-          <span>Total: </span>
-          <span class="total-number"></span>
-        </div>
-        <div class="button-cart">
-          <button onclick="closeCart()" type="button" class="CloseModal">
-            CLOSE
-          </button>
-          <button class="CheckOut">
-            CHECK OUT <i class="fa fa-arrow-right" aria-hidden="true"></i>
-          </button>
-        </div>
+    <footer class="footer">
+      <span class="logoFooter">PHONE X</span>
+      <span class="distributor">Distributors</span>
+      <ul class="logo-supply">
+        <li>
+          <a
+            rel="nofollow"
+            href="https://www.topzone.vn/"
+            target="_blank"
+            title="Chuỗi cửa hàng cao cấp Apple"
+          >
+            <i class="iconlogo-topzone visible"></i>
+          </a>
+        </li>
+        <li>
+          <a rel="nofollow" href="https://www.dienmayxanh.com/" target="_blank">
+            <i class="iconlogo-dienmayxanh visible"></i>
+          </a>
+        </li>
+        <li>
+          <a rel="nofollow" href="https://www.bachhoaxanh.com/" target="_blank">
+            <i class="iconlogo-bachhoaxanh visible"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            rel="nofollow"
+            href="https://www.nhathuocankhang.com/"
+            target="_blank"
+            title="Chuỗi nhà thuốc chuẩn GPP"
+          >
+            <i class="iconlogo-ankhang visible"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            rel="nofollow"
+            href="https://www.avakids.com/"
+            target="_blank"
+            title="Chuỗi cửa hàng mẹ và bé"
+          >
+            <i class="iconlogo-kids visible"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            rel="nofollow"
+            href="https://www.dichvutantam.com/"
+            target="_blank"
+            title="Dịch vụ vệ sinh máy lạnh, sửa chữa điện nước, lắp đặt máy lạnh, máy giặt, tivi"
+          >
+            <i class="iconlogo-tantam visible"></i>
+          </a>
+        </li>
+      </ul>
     </footer>
+
+    <div class="modal-cart">
+      <h1>CART</h1>
+      <ul class="listCart"></ul>
+      <div class="total">
+        <span>Total: </span>
+        <span class="total-number"></span>
+      </div>
+      <div class="button-cart">
+        <button onclick="closeCart()" type="button" class="CloseModal">
+          CLOSE
+        </button>
+        <button class="CheckOut">
+          CHECK OUT <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
     <script src="javascript/product-detail.js"></script>
-    
-    
-</body>
+  </body>
 </html>
