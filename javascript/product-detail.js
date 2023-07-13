@@ -215,18 +215,22 @@ function AddToCart(event){
   fetch(urlDetail)
     .then((response) => response.json())
     .catch((error) => console.log(error))
-    .then((data) => {     
-      var db = JSON.stringify(data);
-      db.quantity =1;
-      listCarts.push(db)
-      localStorage.setItem("listCarts", listCarts)
-      console.log(listCarts)
+    .then((data) => {    
+      data.forEach(item =>{
+        var db = JSON.stringify(item);
+        listCarts.push(db)
+        localStorage.setItem("listCarts", listCarts)
+        console.log(listCarts)
+      }) 
+      
+      
+      
     })   
   reloadCart(); 
 }
 
 function reloadCart() {
-  let db = JSON.parse(localStorage.getItem("listCarts"))
+  let db = JSON.parse(window.localStorage.getItem("listCarts"))
   db.forEach((item, key) => {
     let newUl = document.querySelector(".listCart")
     let newli = document.createElement("li");
@@ -244,10 +248,10 @@ function reloadCart() {
     `
     
     newUl.appendChild(newli);
-    quantity.innerHTML = count;
-    total.innerHTML = totalItem.toLocaleString() + " đ";
+
   });
 }
+reloadCart()
 
 
 

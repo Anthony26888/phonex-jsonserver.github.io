@@ -15,6 +15,8 @@ let valueDetail = "";
 
 
 
+
+
 /******************Product Index */
 
 function displayCard(){  
@@ -41,7 +43,8 @@ function displayCard(){
             newDiv.classList.add("card"); 
             newDiv.onclick = (function () {openDetail(this)});
             newDiv.setAttribute("data-key", `${value.id}`);
-            newDiv.href="product-detail.html"
+            newDiv.href="product-detail.html";
+          
             
               let newImage = new Image();
               newImage.src = "img/products/" + value.image;
@@ -221,6 +224,31 @@ function showSlide(n) {
   setTimeout(showSlide, 2000);
 }
 
+
+function reloadCart() {
+  let db = JSON.parse(window.localStorage.getItem("listCarts"))
+  
+  console.log(db)
+  db.forEach((item, key) => {
+    let newUl = document.querySelector(".listCart")
+    let newli = document.createElement("li");
+
+    newli.innerHTML=`
+      <img src="img/products/${item.image}" alt="${item.name}">
+      <span>${item.name}</span>
+      <div class= "groupQty">
+        <button onclick="changeQuantity(${key},${item.quantity} -1)">-</button>
+        <span class="Qty">1</span>
+        <button onclick="changeQuantity(${key},${item.quantity} + 1)">+</button>
+      </div>
+      <span>${item.price.toLocaleString()} đ</span>
+      <button class="delete" onclick = "clearLi()"><span><i class="fa fa-times" aria-hidden="true"></i></span></button>
+    `
+    
+    newUl.appendChild(newli);
+ 
+  });  
+}
 
 
 
