@@ -226,8 +226,9 @@ function showSlide(n) {
 
 
 function reloadCart() {
-  let db = JSON.parse(window.localStorage.getItem("listCarts"))
-  
+  let db = JSON.parse(localStorage.getItem("listCart"))
+  listCart.innerHTML="";
+  quantity.innerHTML = listCarts.length
   console.log(db)
   db.forEach((item, key) => {
     let newUl = document.querySelector(".listCart")
@@ -238,7 +239,7 @@ function reloadCart() {
       <span>${item.name}</span>
       <div class= "groupQty">
         <button onclick="changeQuantity(${key},${item.quantity} -1)">-</button>
-        <span class="Qty">1</span>
+        <span class="Qty">${item.quantity}</span>
         <button onclick="changeQuantity(${key},${item.quantity} + 1)">+</button>
       </div>
       <span>${item.price.toLocaleString()} đ</span>

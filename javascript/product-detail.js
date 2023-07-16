@@ -2,10 +2,14 @@
 
 var display = document.querySelector(".containerDetail");
 var valueDetail = localStorage.getItem("numberDetail");
+var quantity = document.querySelector(".quantity");
+var listCart = document.querySelector(".listCart")
 
 
 /*****************************DISPLAY PROUCT */
 let listCarts = [];
+console.log(listCarts)
+
 
 function displayProduct() {
   var urlDetail = `http://localhost:3000/idProducts/${valueDetail}`;
@@ -93,7 +97,7 @@ function displayProduct() {
         let newDiv5 = document.createElement("div");
         newDiv5.classList.add("groupButton");
         newDiv5.innerHTML = `
-                <button class="atcDetail" onclick="AddToCart(event)"">Add To Cart</button>
+                <button class="atcDetail" onclick="AddToCart(${key},event)"">Add To Cart</button>
                 <span>or</span>
                 <button class="iPDetail">Installment Payment</button>`;
         newDiv1.appendChild(newDiv3);
@@ -208,29 +212,35 @@ function OpenCart() {
 
 
 
-console.log(listCarts)
-function AddToCart(event){ 
+
+function AddToCart(key,event){ 
   event.preventDefault();
-  var urlDetail = `http://localhost:3000/idProducts/${valueDetail}`;
+  var urlDetail = `http://localhost:3000/products`;
   fetch(urlDetail)
     .then((response) => response.json())
     .catch((error) => console.log(error))
-    .then((data) => {    
-      data.forEach(item =>{
-        var db = JSON.stringify(item);
-        listCarts.push(db)
-        localStorage.setItem("listCarts", listCarts)
-        console.log(listCarts)
-      }) 
+    .then((data) => { 
+      if(listCarts[key] == null){
+        listCarts[key] = JSON.parse(JSON.stringify(data[valueDetail-1]))
+        listCarts[key].quantity =1; 
+        
+      }
+      reloadCart();
+      var jsonObj = JSON.stringify(listCarts)
+      localStorage.setItem("listCart", jsonObj);
+      console.log(jsonObj)
       
-      
-      
-    })   
-  reloadCart(); 
-}
+    }) 
+     
+  } 
+
+
 
 function reloadCart() {
-  let db = JSON.parse(window.localStorage.getItem("listCarts"))
+  let db = JSON.parse(localStorage.getItem("listCart"))
+  listCart.innerHTML="";
+  quantity.innerHTML = listCarts.length
+  console.log(db)
   db.forEach((item, key) => {
     let newUl = document.querySelector(".listCart")
     let newli = document.createElement("li");
@@ -240,7 +250,7 @@ function reloadCart() {
       <span>${item.name}</span>
       <div class= "groupQty">
         <button onclick="changeQuantity(${key},${item.quantity} -1)">-</button>
-        <span class="Qty">1</span>
+        <span class="Qty">${item.quantity}</span>
         <button onclick="changeQuantity(${key},${item.quantity} + 1)">+</button>
       </div>
       <span>${item.price.toLocaleString()} đ</span>
@@ -251,7 +261,7 @@ function reloadCart() {
 
   });
 }
-reloadCart()
+
 
 
 
