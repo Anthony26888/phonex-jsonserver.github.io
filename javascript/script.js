@@ -226,10 +226,9 @@ function showSlide(n) {
 
 
 function reloadCart() {
-  let db = JSON.parse(localStorage.getItem("listCart"))
   listCart.innerHTML="";
-  quantity.innerHTML = listCarts.length
-  console.log(db)
+  let db = localStorage.getItem("listCart")
+  quantity.innerHTML = db.length
   db.forEach((item, key) => {
     let newUl = document.querySelector(".listCart")
     let newli = document.createElement("li");
@@ -250,6 +249,7 @@ function reloadCart() {
  
   });  
 }
+reloadCart();
 
 
 

@@ -221,14 +221,14 @@ function AddToCart(key,event){
     .catch((error) => console.log(error))
     .then((data) => { 
       if(listCarts[key] == null){
-        listCarts[key] = JSON.parse(JSON.stringify(data[valueDetail-1]))
-        listCarts[key].quantity =1; 
+        data.quantity =1; 
+        listCarts[key] = JSON.stringify(data[valueDetail-1])
+        localStorage.setItem("listCart", listCarts[key]);
+        
         
       }
       reloadCart();
-      var jsonObj = JSON.stringify(listCarts)
-      localStorage.setItem("listCart", jsonObj);
-      console.log(jsonObj)
+      
       
     }) 
      
@@ -237,10 +237,10 @@ function AddToCart(key,event){
 
 
 function reloadCart() {
+  listCart.innerHTML="";  
   let db = JSON.parse(localStorage.getItem("listCart"))
-  listCart.innerHTML="";
-  quantity.innerHTML = listCarts.length
   console.log(db)
+  quantity.innerHTML = db.length
   db.forEach((item, key) => {
     let newUl = document.querySelector(".listCart")
     let newli = document.createElement("li");
