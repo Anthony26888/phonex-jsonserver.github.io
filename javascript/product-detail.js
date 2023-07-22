@@ -7,7 +7,9 @@ var listCart = document.querySelector(".listCart")
 
 
 /*****************************DISPLAY PROUCT */
+
 let listCarts = [];
+
 console.log(listCarts)
 
 
@@ -27,7 +29,7 @@ function displayProduct() {
 
         newDiv.classList.add("imageProduct");
         newDiv.innerHTML = `
-              <img class="mySlides checked" src="img/detail/${value.type.imgDetail[0]}" alt="" >
+              <img class="mySlides checked" src="img/detail/${value.type.imgDetail[0]}" data-img="${value.image}" alt="" >
         
               <img class="mySlides" src="img/detail/${value.type.imgDetail[1]}" alt="" style="display:none">
               
@@ -57,7 +59,7 @@ function displayProduct() {
 
         value.type.storage.forEach((item) => {
           let newInput = document.createElement("input");
-          newInput.setAttribute("id", `radio${item}`);
+          newInput.setAttribute("id", `radio${item}`);          
           newInput.setAttribute("type", "radio");
           newInput.setAttribute("name", "storage");
           newInput.value = item;
@@ -81,7 +83,7 @@ function displayProduct() {
         value.type.color.forEach((item) => {
           let newInput1 = document.createElement("input");
           newInput1.setAttribute("id", `radio${item}`);
-          newInput1.setAttribute("type", "radio");
+          newInput1.setAttribute("type", "radio");         
           newInput1.setAttribute("name", "color");
           newInput1.value = item;
 
@@ -97,7 +99,7 @@ function displayProduct() {
         let newDiv5 = document.createElement("div");
         newDiv5.classList.add("groupButton");
         newDiv5.innerHTML = `
-                <button class="atcDetail" onclick="AddToCart(${key},event)"">Add To Cart</button>
+                <button class="atcDetail" onclick="AddToCart(event)"">Add To Cart</button>
                 <span>or</span>
                 <button class="iPDetail">Installment Payment</button>`;
         newDiv1.appendChild(newDiv3);
@@ -213,32 +215,44 @@ function OpenCart() {
 
 
 
-function AddToCart(key,event){ 
+function AddToCart(event){ 
   event.preventDefault();
-  var urlDetail = `http://localhost:3000/products`;
-  fetch(urlDetail)
-    .then((response) => response.json())
-    .catch((error) => console.log(error))
-    .then((data) => { 
-      if(listCarts[key] == null){
-        data.quantity =1; 
-        listCarts[key] = JSON.stringify(data[valueDetail-1])
-        localStorage.setItem("listCart", listCarts[key]);
-        
-        
-      }
-      reloadCart();
-      
-      
-    }) 
+  var valueImage = document.querySelector(".checked").getAttribute("data-img");
+  var valueName = document.querySelector(".nameProduct").innerText;
+  var valuePrice = document.querySelector(".priceProduct").innerText;
+  var valueStorage = document.getElementsByName("storage");
+  var valueColor = document.getElementsByName("color");
+  var quantity = 1;
+  for(i=0; i<valueStorage.length; i++){
+    if (valueStorage[i].checked == true )
+    var selectStorage = valueStorage[i].value;
+  }
+  for(i=0; i<valueColor.length; i++){
+    if (valueColor[i].checked == true )
+    var selectColor = valueColor[i].value;
+  }
+  var formData = {
+    image: valueImage,
+    name: valueName,
+    price: valuePrice,
+    storage : selectStorage,
+    color : selectColor,
+    quantity: quantity
+  };
+  listCarts.push(formData)
+  localStorage.setItem("listCarts", JSON.stringify(listCarts));
+  
+  
+  console.log(formData);
+  reloadCart()
      
-  } 
+} 
 
 
 
 function reloadCart() {
   listCart.innerHTML="";  
-  let db = JSON.parse(localStorage.getItem("listCart"))
+  let db = JSON.parse(localStorage.getItem("listCarts"))
   console.log(db)
   quantity.innerHTML = db.length
   db.forEach((item, key) => {
@@ -248,12 +262,13 @@ function reloadCart() {
     newli.innerHTML=`
       <img src="img/products/${item.image}" alt="${item.name}">
       <span>${item.name}</span>
+      <span>${item.color}</span>
       <div class= "groupQty">
         <button onclick="changeQuantity(${key},${item.quantity} -1)">-</button>
         <span class="Qty">${item.quantity}</span>
         <button onclick="changeQuantity(${key},${item.quantity} + 1)">+</button>
       </div>
-      <span>${item.price.toLocaleString()} đ</span>
+      <span>${item.price.toLocaleString()}</span>
       <button class="delete" onclick = "clearLi()"><span><i class="fa fa-times" aria-hidden="true"></i></span></button>
     `
     
