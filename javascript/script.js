@@ -226,8 +226,8 @@ function showSlide(n) {
 
 
 function reloadCart() {
-  listCart.innerHTML="";
-  let db = localStorage.getItem("listCart")
+  listCart.innerHTML="";  
+  let db = JSON.parse(localStorage.getItem("listCarts"))  
   quantity.innerHTML = db.length
   db.forEach((item, key) => {
     let newUl = document.querySelector(".listCart")
@@ -235,14 +235,22 @@ function reloadCart() {
 
     newli.innerHTML=`
       <img src="img/products/${item.image}" alt="${item.name}">
-      <span>${item.name}</span>
-      <div class= "groupQty">
-        <button onclick="changeQuantity(${key},${item.quantity} -1)">-</button>
-        <span class="Qty">${item.quantity}</span>
-        <button onclick="changeQuantity(${key},${item.quantity} + 1)">+</button>
+      <div class="groupform">
+      
+        <span>${item.name} ${item.storage} ${item.color}</span>
+        <span class="priceCart">${item.price.toLocaleString()}</span>
+        <div class="qtyDelete">
+          <div class= "groupQty">
+          <button onclick="changeQuantity(${key},${item.quantity} -1)">-</button>
+          <span class="Qty">${item.quantity}</span>
+          <button onclick="changeQuantity(${key},${item.quantity} + 1)">+</button>
+          <button class="delete" onclick = "clearLi()"><span><i class="fa fa-trash" aria-hidden="true"></i></span></button>
       </div>
-      <span>${item.price.toLocaleString()} đ</span>
-      <button class="delete" onclick = "clearLi()"><span><i class="fa fa-times" aria-hidden="true"></i></span></button>
+      
+      
+        </div>
+        
+    </div>
     `
     
     newUl.appendChild(newli);
