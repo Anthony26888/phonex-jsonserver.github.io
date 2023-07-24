@@ -110,10 +110,11 @@ function openDetail(item){
 /***********************OPEN - CLOSE MODAL CART */
 function closeCart() {
   document.querySelector(".modal-cart").style.display = "none";  
-  
+  document.querySelector(".blur-cart").style.display = "none"
 }
 function OpenCart() {
   document.querySelector(".modal-cart").style.display = "block";  
+  document.querySelector(".blur-cart").style.display = "block"
 }
 
 

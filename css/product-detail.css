@@ -507,12 +507,133 @@ h1,h2, h3, h4, h5, h6{
   
 }
 
-h1 {
-  position: absolute;
-  top: 50px;
-  left: 50px;
+.blur-cart{
+  position: fixed;
+  top: 0;
+  display: none;
+  background-color: #090909;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.titleCart {
+  margin-top: 80px;
+  margin-left: 20px;
   font-size: 25px;
 }
+
+
+
+.listCart li {
+  display: flex;
+  flex-direction: row;
+  
+  column-gap: 3px;
+  color: black;  
+  width: 120%;
+
+  margin: 0 -10%;  
+  margin-bottom: 15px;
+  align-items: center;
+
+  border: 1px solid #bbbb;
+  border-radius: 10px;
+  padding: 5px 0;
+
+  background-color: whitesmoke;
+  transition: 0.5s ease-in;
+}
+
+
+
+.listCart li img{
+  margin-left: 20px;
+  width:100px;
+  height:100px;
+}
+
+.groupform{
+  margin-left: 20px;
+  height:100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.storageColor{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.priceCart{
+  margin-top: 10px;
+  color: #e83a45;
+}
+
+
+
+.listCart li button{
+  width:20px;
+  height:20px;
+  align-items: center;
+  text-align: center;
+}
+
+.groupQty{
+  display: flex;
+}
+
+.inputQuantity{
+  width: 30px;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+}
+
+.qtyDelete{
+  margin-top: 10px;
+}
+
+.Qty{
+  
+  margin: 0 5px;
+  width:30px ;
+ 
+}
+
+.delete{
+  border: 0;
+  width:50px;
+  height: 50px;
+  margin-left:20px ;
+}
+
+
+.total {
+  position: absolute;
+  color: black;
+  top: 80%;
+  left: 47%;
+  display: flex;
+  align-items: center;
+}
+
+.total span {
+  font-size: 20px;
+  
+}
+
+.total .total-number {
+  color: #e83a45;
+  
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+
+  margin-left: 10px;
+}
+
 
 .button-cart {
   display: flex;
@@ -675,106 +796,6 @@ h1 {
   padding: 0 40px;
   
   
-}
-
-.listCart li {
-  display: flex;
-  flex-direction: row;
-  
-  column-gap: 3px;
-  color: black;  
-  width: 120%;
-
-  margin: 0 -10%;  
-  margin-bottom: 15px;
-  align-items: center;
-
-  border: 1px solid #bbbb;
-  border-radius: 10px;
-  padding: 5px 0;
-
-  background-color: whitesmoke;
-  transition: 0.5s ease-in;
-}
-
-
-
-.listCart li img{
-  margin-left: 20px;
-  width:100px;
-  height:100px;
-}
-
-.groupform{
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.storageColor{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.priceCart{
-  color: #e83a45;
-}
-
-
-
-.listCart li button{
-  width:20px;
-  height:20px;
-  align-items: center;
-  text-align: center;
-}
-
-.groupQty{
-  display: flex;
-}
-
-.qtyDelete{
-  column-gap: 5px;
-}
-
-.Qty{
-  
-  margin: 0 5px;
-  width:30px ;
- 
-}
-
-.delete{
-  border: 0;
-  width:50px;
-  height: 50px;
-  margin-left:50px ;
-}
-
-
-.total {
-  position: absolute;
-  color: black;
-  top: 80%;
-  left: 47%;
-  display: flex;
-  align-items: center;
-}
-
-.total span {
-  font-size: 20px;
-  
-}
-
-.total .total-number {
-  color: #e83a45;
-  
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 18px;
-
-  margin-left: 10px;
 }
 
 

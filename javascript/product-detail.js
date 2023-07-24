@@ -172,6 +172,12 @@ function displayProduct() {
 }
 displayProduct();
 
+
+
+
+
+
+
 /***************************************SILDER SHOW */
 let slideIndexs = 1;
 showDivs(slideIndexs);
@@ -201,10 +207,12 @@ function showDivs(n) {
 /***********************OPEN - CLOSE MODAL CART */
 function closeCart() {
   document.querySelector(".modal-cart").style.display = "none";  
+  document.querySelector(".blur-cart").style.display = "none"
   
 }
 function OpenCart() {
   document.querySelector(".modal-cart").style.display = "block";  
+  document.querySelector(".blur-cart").style.display = "block"
 }
 
 
@@ -253,8 +261,8 @@ function AddToCart(event){
 function reloadCart() {
   listCart.innerHTML="";  
   let db = JSON.parse(localStorage.getItem("listCarts"))  
-  quantity.innerHTML = db.length
-  db.forEach((item, key) => {
+  quantity.innerHTML = db.length;
+  db.forEach(item => {
     let newUl = document.querySelector(".listCart")
     let newli = document.createElement("li");
 
@@ -266,9 +274,8 @@ function reloadCart() {
         <span class="priceCart">${item.price.toLocaleString()}</span>
         <div class="qtyDelete">
           <div class= "groupQty">
-          <button onclick="changeQuantity(${key},${item.quantity} -1)">-</button>
-          <span class="Qty">${item.quantity}</span>
-          <button onclick="changeQuantity(${key},${item.quantity} + 1)">+</button>
+          <input type="number" class="inputQuantity" min="1" value="${item.quantity}"/>
+          
           <button class="delete" onclick = "clearLi()"><span><i class="fa fa-trash" aria-hidden="true"></i></span></button>
       </div>
       
